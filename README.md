@@ -3,8 +3,7 @@
 Imagem do painel do sprint:
 
 ![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/bc6886ab-20ae-4845-93aa-b994532d6dd6)
-![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/dc4b17ac-c0cf-4686-b80d-be9f280b252b)
-
+![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/3027a2ba-ac55-412d-b1bd-118402048b0d)
 
 
 

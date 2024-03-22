@@ -15,5 +15,5 @@ Imagem do Backlog:
 Link para o prototipo de Lo-fi:
 (https://www.figma.com/proto/SrLadAJxEpLGuKsHno4niq/Eye-of-job-Lo-fi?type=design&node-id=14-26&t=bsnGAWvmnlMsRVlU-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=14%3A26&mode=design)
 
-Link para o ScreenCast :
+Link para o ScreenCast:
 (https://youtu.be/wk1WEvwAZXU)

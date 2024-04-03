@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Empresa
 
 def inicio(request):
     return render(request,'inicio.html')

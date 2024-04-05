@@ -89,6 +89,12 @@ def home(request):
         
         return HttpResponse('Foto enviada com sucesso!')
     
+def meus_projetos (request):
+    return render(request,'meus_projetos.html')
+    
+def projetos(request):
+    return render(request,'projetos.html')
+    
 
 
 

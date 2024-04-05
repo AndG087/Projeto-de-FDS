@@ -8,8 +8,8 @@ from .models import Avaliacao
 from rolepermissions.roles import assign_role
 from rolepermissions.decorators import has_role_decorator, has_permission_decorator
 from rolepermissions.permissions import revoke_permission
-from .models import MyFile
-from .forms import ProjectForm
+from .models import person
+from .models import Projeto
 
 @login_required(login_url="/login/")
 def inicio(request):
@@ -55,13 +55,10 @@ def personuser(request):
     return render(request,'personuser.html')
 
 
-from django.shortcuts import render
-from .models import Avaliacao
-
 def avaliacaogeral(request):
     if request.method == 'POST':
         funcionario_nome = request.POST.get('funcionario_name')
-        nota = int(request.POST.get('rate'))
+        nota = float(request.POST.get('rate'))
         try:
             user = User.objects.get(username=funcionario_nome)
             avaliacao = Avaliacao(funcionario_nome=funcionario_nome, nota=nota, user=user)
@@ -73,9 +70,10 @@ def avaliacaogeral(request):
     
     # Obtendo todas as avaliações do banco de dados
     avaliacoes = Avaliacao.objects.all()
+    usuarios = User.objects.all()
     
     # Passando as avaliações para o template
-    return render(request, 'avaliacaogeral.html', {'avaliacoes': avaliacoes})
+    return render(request, 'avaliacaogeral.html', {'avaliacoes': avaliacoes,'usuarios': usuarios})
 
 
 
@@ -84,11 +82,12 @@ def home(request):
         return render(request, "home.html")
     elif request.method == "POST":
         file = request.FILES.get("my_file")
+        descricao = request.POST.get("texto")
         
         if file.size > 20000000:
             return HttpResponse('Arquivo muito grande')
         
-        mf = MyFile(title="minha_imagem", arq=file)
+        mf = person(title="minha_imagem", arq=file,descricao=descricao)
         mf.save()
         
         print(file)
@@ -97,13 +96,15 @@ def home(request):
     
 def new_project(request):
     if request.method == 'POST':
-        form = ProjectForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('projetos')  # Redirecionar para a página de projetos após o envio bem-sucedido
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        participants = request.POST.get('participants')
+        
+        project = Projeto.objects.create(name=name, description=description, participants=participants)
+        project.save()
+        return redirect('projetos')  
     else:
-        form = ProjectForm()
-    return render(request, 'projetos.html', {'form': form})
+        return render(request, 'projetos.html')
 
 def meus_projetos(request):
     return render(request,'meus_projetos.html')

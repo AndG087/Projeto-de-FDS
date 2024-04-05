@@ -9,15 +9,17 @@
 </head>
 <body>
 
+
 <header>
     <div class="container">
-        <h1>Bem-vindo à Nossa Empresa</h1>
+        <h1>EYE OF JOB</h1>
+        <div class="linha-de-separacao"></div>
         <nav>
             <ul>
                 <li><a href="{% url 'inicio' %}">Home</a></li>
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'signup' %}">Cadastrar</a></li>
-                <li><a href="{% url 'personuser' %}">Pessoa</a></li>
+                <li><a href="{% url 'personuser' %}">Perfil</a></li>
                 <li><a href="{% url 'avaliacaogeral' %}">Avaliação Geral</a></li>
                 <!-- Adicione mais links de navegação conforme necessário -->
             </ul>
@@ -26,23 +28,19 @@
 </header>
 
 <main>
+    <br>
+    <div>
+        <h1>Bem vindo à nossa empresa<h1>
+    </div>
+    <br><br><br>
     <section class="about-us">
         <div class="container">
             <h2>Sobre Nós</h2>
-            <p>Descrição breve da sua empresa ou serviço.</p>
+            <p>Olá somos o Eye-of-job um site de análise de desempenho profissional, 
+                a proposta do nossso site é desenvolver uma plataforma onde as empresas possam administrar o desempenho de seus funcionários. Aqui é possível administrar de prazos, avaliar individualmente cada funcionário, entre outros. 
+                Com esta plataforma fica muito mais fácil organizar uma empresa de maneira correta e avaliar de forma correta quem se empenha ou não pela empresa. </p>
         </div>
-    </section>
-    <section class="services">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <ul>
-                <li>Serviço 1</li>
-                <li>Serviço 2</li>
-                <li>Serviço 3</li>
-                <!-- Adicione mais serviços conforme necessário -->
-            </ul>
-        </div>
-    </section>
+   
 </main>
 
 <footer>

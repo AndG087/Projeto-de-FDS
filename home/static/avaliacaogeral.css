@@ -1,7 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #fff;
 }
 
@@ -9,7 +7,6 @@ header {
     background-color: #68a4d4;
     color: #fff;
     text-align: center;
-    
 }
 
 img{
@@ -18,10 +15,12 @@ img{
 }
 
 h1{
-    text-align: center;
+    text-align: center;;
 }
 
+
 .rating {
+    margin-left: 300px;
     display: inline-block;
     font-size: 0;
     position: relative;
@@ -79,6 +78,3 @@ h1{
     transition-delay: calc(0.1 * attr(data-idx integer));
 }        
 
-.formulario{
-    text-align: center;
-}

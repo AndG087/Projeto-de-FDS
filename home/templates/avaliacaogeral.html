@@ -7,15 +7,24 @@
     <title>Avaliação de Usuários</title>
     <link rel="stylesheet" href="{% static 'avaliacaogeral.css' %}">
     
+    <style>
+        .formulario {
+            float: left;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.webp">
+    <br><br><br><br>
 </header>
+
 
 <h1><b>AVALIE OUTROS FUNCIONÁRIOS</b></h1>
 
+<hr>
+
+<br>
 <div class="formulario">
 <form method="post" action="{% url 'avaliacaogeral' %}">
     {% csrf_token %}
@@ -39,7 +48,7 @@
         <label for='rating_1'></label>
     </div>
 
-    <button type="submit">Enviar Avaliação</button>
+    <button type="submit" id='botao'>Enviar Avaliação</button>
 </form>
 </div>
 

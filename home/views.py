@@ -9,6 +9,7 @@ from rolepermissions.roles import assign_role
 from rolepermissions.decorators import has_role_decorator, has_permission_decorator
 from rolepermissions.permissions import revoke_permission
 from .models import MyFile
+from .forms import ProjectForm
 
 @login_required(login_url="/login/")
 def inicio(request):
@@ -89,12 +90,19 @@ def home(request):
         
         return HttpResponse('Foto enviada com sucesso!')
     
-def meus_projetos (request):
+def new_project(request):
+    if request.method == 'POST':
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('projetos')  # Redirecionar para a página de projetos após o envio bem-sucedido
+    else:
+        form = ProjectForm()
+    return render(request, 'projetos.html', {'form': form})
+
+def meus_projetos(request):
     return render(request,'meus_projetos.html')
-    
-def projetos(request):
-    return render(request,'projetos.html')
-    
+
 
 
 

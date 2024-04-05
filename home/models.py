@@ -20,3 +20,8 @@ class MyFile(models.Model):
 
     def str(self) -> str:
         return self.title
+    
+class Project(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    participants = models.CharField(max_length=200)

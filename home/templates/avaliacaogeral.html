@@ -19,38 +19,63 @@
     <br><br><br><br>
 </header>
 
-
 <h1><b>AVALIE OUTROS FUNCIONÁRIOS</b></h1>
-
 <hr>
-
 <br>
-<div class="formulario">
-<form method="post" action="{% url 'avaliacaogeral' %}">
-    {% csrf_token %}
-    <label for="funcionario_name">Nome do Funcionário:</label>
-    <input type="text" id="funcionario_name" name="funcionario_name" required><br><br>
-    
-    <div class="rating">
-        <input type='radio' hidden name='rate' id='rating_5' data-idx='0' value='5'>	
-        <label for='rating_5'></label>
-    
-        <input type='radio' hidden name='rate' id='rating_4' data-idx='1' value='4'>
-        <label for='rating_4'></label>
-    
-        <input type='radio' hidden name='rate' id='rating_3' data-idx='2' value='3'>
-        <label for='rating_3'></label>
-    
-        <input type='radio' hidden name='rate' id='rating_2' data-idx='3' value='2'>
-        <label for='rating_2'></label>
-    
-        <input type='radio' hidden name='rate' id='rating_1' data-idx='4' value='1'>
-        <label for='rating_1'></label>
-    </div>
 
-    <button type="submit" id='botao'>Enviar Avaliação</button>
-</form>
+<!-- Formulário de avaliação -->
+<div class="formulario">
+    <form method="post" action="{% url 'avaliacaogeral' %}">
+        {% csrf_token %}
+        <label for="funcionario_name">Nome do Funcionário:</label>
+        <input type="text" id="funcionario_name" name="funcionario_name" required><br><br>
+        
+        <div class="rating">
+            <input type='radio' hidden name='rate' id='rating_5' data-idx='0' value='5'>	
+            <label for='rating_5'></label>
+        
+            <input type='radio' hidden name='rate' id='rating_4' data-idx='1' value='4'>
+            <label for='rating_4'></label>
+        
+            <input type='radio' hidden name='rate' id='rating_3' data-idx='2' value='3'>
+            <label for='rating_3'></label>
+        
+            <input type='radio' hidden name='rate' id='rating_2' data-idx='3' value='2'>
+            <label for='rating_2'></label>
+        
+            <input type='radio' hidden name='rate' id='rating_1' data-idx='4' value='1'>
+            <label for='rating_1'></label>
+        </div>
+
+        <button type="submit" id='botao'>Enviar Avaliação</button>
+    </form>
 </div>
+
+<!-- Lista de funcionários avaliados -->
+<div class="avaliacoes">
+    <h2>Funcionários Avaliados:</h2>
+    <ul>
+        {% for avaliacao in avaliacoes %}
+            <li class="avaliacao-item">
+                {{ avaliacao.funcionario_nome }} - 
+                <span class="avaliacao-rating">
+                    {% for _ in "x"|ljust:avaliacao.nota %}
+                        &#9733; <!-- Estrela preenchida -->
+                    {% endfor %}
+                    {% for _ in 1|ljust:5|slice:avaliacao.nota|add:"-5" %}
+                        &#9734; <!-- Estrela vazia -->
+                    {% endfor %}
+                </span>
+            </li>
+        {% empty %}
+            <li>Nenhum funcionário avaliado ainda.</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+
 
 </body>
 </html>

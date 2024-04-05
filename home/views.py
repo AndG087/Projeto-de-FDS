@@ -55,23 +55,28 @@ def personuser(request):
     return render(request,'personuser.html')
 
 
+from django.shortcuts import render
+from .models import Avaliacao
+
 def avaliacaogeral(request):
     if request.method == 'POST':
         funcionario_nome = request.POST.get('funcionario_name')
         nota = int(request.POST.get('rate'))
         try:
-            
             user = User.objects.get(username=funcionario_nome)
             avaliacao = Avaliacao(funcionario_nome=funcionario_nome, nota=nota, user=user)
             avaliacao.save()
             return HttpResponse('avaliacao_sucesso')
-           
         except User.DoesNotExist:
-            
             error_message = "Usuário não encontrado. Por favor, verifique o nome de usuário e tente novamente."
             return HttpResponse('vai fazer sign in filha da ...')
-        
-    return render(request, 'avaliacaogeral.html')
+    
+    # Obtendo todas as avaliações do banco de dados
+    avaliacoes = Avaliacao.objects.all()
+    
+    # Passando as avaliações para o template
+    return render(request, 'avaliacaogeral.html', {'avaliacoes': avaliacoes})
+
 
 
 def home(request):

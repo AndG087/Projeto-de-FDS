@@ -1,18 +1,55 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="pt.br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eyeofjob</title>
+    <title>Página Inicial</title>
     <link rel="stylesheet" href="{% static 'inicio.css' %}">
-   
 </head>
-<style>
-</style>
 <body>
+
 <header>
+    <div class="container">
+        <h1>Bem-vindo à Nossa Empresa</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Home</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Cadastrar</a></li>
+                <li><a href="{% url 'personuser' %}">Pessoa</a></li>
+                <li><a href="{% url 'avaliacaogeral' %}">Avaliação Geral</a></li>
+                <!-- Adicione mais links de navegação conforme necessário -->
+            </ul>
+        </nav>
+    </div>
 </header>
-<h1>Oi</h1>
+
+<main>
+    <section class="about-us">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Descrição breve da sua empresa ou serviço.</p>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <ul>
+                <li>Serviço 1</li>
+                <li>Serviço 2</li>
+                <li>Serviço 3</li>
+                <!-- Adicione mais serviços conforme necessário -->
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>

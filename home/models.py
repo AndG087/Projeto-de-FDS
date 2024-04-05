@@ -14,4 +14,9 @@ class Avaliacao(models.Model):
     nota = models.IntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     
-   
+class MyFile(models.Model):
+    title = models.CharField(max_length=20)
+    arq = models.FileField(upload_to="img")
+
+    def str(self) -> str:
+        return self.title

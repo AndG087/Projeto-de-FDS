@@ -9,26 +9,15 @@
 </head>
 <body>
 
-    
-    <p>Criar imagem editavel aqui:</p>
-    <img crc="imagem.png" link="">
-
-    <h5>Informações de usuário:</h5>
-
-    <form>
-        <label for="texto"></label>
-        <input type="text" id="texto" name="texto">
-        <input type="submit" value="Salvar">
-    </form>
-
-    <h1>Nome Colaborador</h1>
-    <h3>Seus projetos:</h3>
-
-    <form>
+    <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <input type="file" name="my_file">
+        <input type="submit" value="enviar">
         <label for="texto"></label>
         <input type="text" id="texto" name="texto">
         <input type="submit" value="Salvar">
     </form>
     
-</body>
-</html>
+    <h5 class="h5">Informações de usuário:</h5>
+
+    <h1 class="h1">Nome Colaborador</h1>
+    <h3 class="h3">Seus projetos:</h3>

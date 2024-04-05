@@ -8,6 +8,7 @@ from .models import Avaliacao
 from rolepermissions.roles import assign_role
 from rolepermissions.decorators import has_role_decorator, has_permission_decorator
 from rolepermissions.permissions import revoke_permission
+from .models import MyFile
 
 @login_required(login_url="/login/")
 def inicio(request):
@@ -70,6 +71,24 @@ def avaliacaogeral(request):
             return HttpResponse('vai fazer sign in filha da ...')
         
     return render(request, 'avaliacaogeral.html')
+
+
+def home(request):
+    if request.method == "GET":
+        return render(request, "home.html")
+    elif request.method == "POST":
+        file = request.FILES.get("my_file")
+        
+        if file.size > 20000000:
+            return HttpResponse('Arquivo muito grande')
+        
+        mf = MyFile(title="minha_imagem", arq=file)
+        mf.save()
+        
+        print(file)
+        
+        return HttpResponse('Foto enviada com sucesso!')
+    
 
 
 

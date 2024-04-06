@@ -15,16 +15,15 @@ import os
 from dotenv import load_dotenv
 
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(BASE_DIR / '.env')
 
+dotenvpath = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenvpath)
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
-TARGET_ENV = os.getenv('TARGET_ENV')
+TARGET_ENV = os.environ.get("TARGET_ENV")
 NOT_PROD = not TARGET_ENV.lower().startswith('prod')
+
 
 if NOT_PROD:
     # SECURITY WARNING: don't run with debug turned on in production!

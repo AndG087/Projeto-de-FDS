@@ -22,7 +22,7 @@ dotenvpath = os.path.join(BASE_DIR, '.env')
 load_dotenv(dotenvpath)
 
 TARGET_ENV = os.environ.get("TARGET_ENV")
-NOT_PROD = not TARGET_ENV.lower().startswith('prod')
+#NOT_PROD = not TARGET_ENV.lower().startswith('prod')
 
 
 if NOT_PROD:

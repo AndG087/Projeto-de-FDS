@@ -48,16 +48,12 @@ def signup(request):
         user = User.objects.create_user(username=nome,email=email,password=senha)
         user.save()
 
-        return redirect('inicio')
+        return redirect('login')
     
 
 def personuser(request):
     return render(request,'personuser.html')
 
-
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.contrib import messages
 
 def avaliacaogeral(request):
     if request.method == 'POST':
@@ -70,9 +66,7 @@ def avaliacaogeral(request):
             return HttpResponse('avaliacao_sucesso')
         except User.DoesNotExist:
             error_message = "Usuário não encontrado. Por favor, verifique o nome de usuário e tente novamente."
-            messages.error(request, error_message)
-            return redirect('avaliacaogeral')
-           
+            return HttpResponse('vai fazer sign in filha da ...')
     
     # Obtendo todas as avaliações do banco de dados
     avaliacoes = Avaliacao.objects.all()
@@ -80,7 +74,6 @@ def avaliacaogeral(request):
     
     # Passando as avaliações para o template
     return render(request, 'avaliacaogeral.html', {'avaliacoes': avaliacoes,'usuarios': usuarios})
-
 
 
 

@@ -6,9 +6,13 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: sans-serif; /* Altera a fonte para uma fonte sans-serif */
   background-color: #f8f8f8;
   color: #333;
+}
+
+#Eye {
+  padding-right: 1%;
 }
 
 .container {
@@ -65,7 +69,8 @@ hr {
 }
 
 .formulario {
-  width: 50%;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -88,6 +93,7 @@ hr {
   text-transform: capitalize;
   padding: 0 50px 8%;
   color: orange;
+  padding-left: 31%;
 }
 
 .rating label {
@@ -147,26 +153,100 @@ hr {
 }
 
 .avaliacoes {
-  width: 80%;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  font-family: sans-serif;
 }
 
 .avaliacoes h2 {
   font-size: 20px;
   margin-bottom: 10px;
-}
-
-.avaliacoes ul {
-  list-style-type: none;
-  display: inline-block;
-  vertical-align: top;
-  width: 45%; /* Ajuste o tamanho conforme necessário */
+  font-family: sans-serif;
 }
 
 .avaliacoes .avaliacao-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
   margin-bottom: 10px;
+  background-color: #f9f9f9;
+  list-style-type: none;
 }
 
 .avaliacoes .avaliacao-rating {
-  color: #ffcc00;
+  color: orange;
+  opacity: 0.6;
+  filter: drop-shadow(0 0 4px);
+}
+
+.avaliacoes .avaliacao-rating .avaliacao-estrelas {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.avaliacoes .avaliacao-rating .avaliacao-estrela {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.avaliacoes .avaliacao-rating .avaliacao-estrela::before {
+  content: "\2606";
+}
+
+.avaliacoes .avaliacao-rating .avaliacao-cheia {
+  color: orange;
+}
+
+.wrapper {
+  padding-left: 31%;
+}
+
+.enviar-avaliacao {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.enviar-avaliacao span {
+  position: relative;
+  z-index: 2;
+}
+
+.enviar-avaliacao:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: green;
+  transition: all .35s;
+}
+
+.enviar-avaliacao:hover {
+  color: #fff;
+}
+
+.enviar-avaliacao:hover:after {
+  width: 100%;
+}
+
+.avaliacoes-lista {
+  list-style-type: disc;
+  color: black;
+}
+
+li{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

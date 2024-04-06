@@ -28,7 +28,7 @@ def login(request):
         if user:
             logind(request,user)
 
-            return HttpResponse("Autenticado")
+            return redirect('inicio')
         else:
             return HttpResponse("Nome ou senha incorretos")
             
@@ -48,7 +48,7 @@ def signup(request):
         user = User.objects.create_user(username=nome,email=email,password=senha)
         user.save()
 
-        return HttpResponse("Dados salvos")
+        return redirect('login')
     
 
 def personuser(request):

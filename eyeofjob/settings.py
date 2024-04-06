@@ -25,7 +25,7 @@ TARGET_ENV = os.environ.get("TARGET_ENV")
 #NOT_PROD = not TARGET_ENV.lower().startswith('prod')
 
 
-if NOT_PROD:
+if False:
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
     # SECURITY WARNING: keep the secret key used in production secret!

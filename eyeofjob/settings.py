@@ -22,10 +22,10 @@ dotenvpath = os.path.join(BASE_DIR, '.env')
 load_dotenv(dotenvpath)
 
 TARGET_ENV = os.environ.get("TARGET_ENV")
-#NOT_PROD = not TARGET_ENV.lower().startswith('prod')
+NOT_PROD = False
 
 
-if False:
+if NOT_PROD:
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
     # SECURITY WARNING: keep the secret key used in production secret!

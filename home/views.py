@@ -66,7 +66,7 @@ def avaliacaogeral(request):
             return HttpResponse('avaliacao_sucesso')
         except User.DoesNotExist:
             error_message = "Usuário não encontrado. Por favor, verifique o nome de usuário e tente novamente."
-            return HttpResponse('vai fazer sign in filha da ...')
+            return HttpResponse('Usuário não encontrado')
     
     # Obtendo todas as avaliações do banco de dados
     avaliacoes = Avaliacao.objects.all()

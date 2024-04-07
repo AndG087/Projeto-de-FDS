@@ -33,7 +33,7 @@ if NOT_PROD:
     DEBUG = True
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = 'django-insecure-mr_k(nk24&uwy)07w6lh*!a*&3^i=0m=3e5dk2djl-(xmv!-2t'
-    ALLOWED_HOSTS = ['eye-of-job.azurewebsites.net']
+    ALLOWED_HOSTS = ['eye-of-job.azurewebsites.net','127.0.0.1']
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',

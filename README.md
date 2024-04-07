@@ -17,3 +17,8 @@ Link para o prototipo de Lo-fi:
 
 Link para o ScreenCast:
 (https://youtu.be/wk1WEvwAZXU)
+
+<h1>Entrega 02</h1>
+
+Diagrama de atividade:
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/128396955/5cc2f3ee-8a93-4242-b5f3-c5d08bd6921a)

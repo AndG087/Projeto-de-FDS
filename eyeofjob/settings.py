@@ -12,7 +12,6 @@ load_dotenv(BASE_DIR / '.env')
 
 
 
-#larissa louca
 TARGET_ENV = os.getenv('TARGET_ENV')
 NOT_PROD = not TARGET_ENV.lower().startswith('Prod')
 

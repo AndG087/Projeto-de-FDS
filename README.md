@@ -27,6 +27,7 @@ Diagrama de atividade:
 Quadro da Sprint 01 e backlog do jira:
 
 ![Captura de tela 2024-04-07 181042](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/f7d2ccc9-037b-4793-a0dc-b13d17e72de7)
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/deeb68b4-b6eb-4dee-a441-afc62f5e5a7f)
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/8df90cdf-8b42-4235-9d98-a4834284e09b)
 
 Feedbacks do pair programming:

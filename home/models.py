@@ -23,4 +23,4 @@ class person(models.Model):
     descricao = models.CharField(max_length=500)
 
     def str(self) -> str:
-        return self.title
+        return self.nome

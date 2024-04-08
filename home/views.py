@@ -66,7 +66,7 @@ def avaliacaogeral(request):
             return HttpResponse('avaliacao_sucesso')
         except User.DoesNotExist:
             error_message = "Usuário não encontrado. Por favor, verifique o nome de usuário e tente novamente."
-            return HttpResponse('vai fazer sign in filha da ...')
+            return HttpResponse('Usuário não encontrado')
     
     # Obtendo todas as avaliações do banco de dados
     avaliacoes = Avaliacao.objects.all()
@@ -81,18 +81,16 @@ def home(request):
     if request.method == "GET":
         return render(request, "home.html")
     elif request.method == "POST":
-        file = request.FILES.get("my_file")
+        file = request.POST.get("my_file")
         descricao = request.POST.get("texto")
         
-        if file.size > 20000000:
-            return HttpResponse('Arquivo muito grande')
         
         mf = person(title="minha_imagem", arq=file,descricao=descricao)
         mf.save()
         
         print(file)
         
-        return HttpResponse('Foto enviada com sucesso!')
+        return HttpResponse('Foto e informação enviada com sucesso!')
     
 def new_project(request):
     if request.method == 'POST':
@@ -102,7 +100,7 @@ def new_project(request):
         
         project = Projeto.objects.create(name=name, description=description, participants=participants)
         project.save()
-        return redirect('projetos')  
+        return HttpResponse('Projeto criado com sucesso!') 
     else:
         return render(request, 'projetos.html')
 

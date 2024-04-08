@@ -35,7 +35,7 @@ Feedbacks do pair programming:
 
   Anderson Gomes e Breno Lira:
           Realizamos o pair programming com o objetivo de estabelecermos a história de avaliação geral dos funcionários com parâmetro de 5 estrelas.
-          Resultado: A implementação foi concluída com sucesso, além disso já existem tratamentos para erros encontrados em nossa pesquisa com finalidade de concluir o  bug tracker/issues, a todo momento quando um dos dois estivesse realizando a parte prática, o outro estava lá para contribuir com o pensamento.
+          Resultado: A implementação foi concluída com sucesso, além disso já existem tratamentos para erros encontrados em nossa pesquisa com finalidade de concluir o bug tracker/issues, a todo momento quando um dos dois estivesse realizando a parte prática, o outro estava lá para contribuir com o pensamento.
        Conclusão: O pair programming foi um sucesso e poodemos reproduzir as nossas experiencias com um ditado do tio Ben, sim ele mesmo, "Com grandes poderes, vêm grandes responsabilidades" 
 
 
@@ -43,9 +43,6 @@ Feedbacks do pair programming:
           Realizamos pair programming para implementar um novo recurso de criação de novos projetos para a empresa.
           Resultado: Acredito que o pair programming teve sucesso pois além de implementarmos nossa história de maneira correta com as experiência de cada lado foi possível realizar essa função de forma mais dinâmica. Enquanto Arthur tinha conhecimento vasto sobre a parte de banco de dados Felipe realizou a parte do html. Independente de qual participante estivesse realizando a parte prático o outro estava presente para ajuda no raciocínio.
 
-  Lucas de Holanda e Vinícius:
+  Lucas de Holanda e Vinicius Freitas:
           Realizamos o pair programming para implementar a história de personalização do usuário;
-          Resultado: acho que o pair programming serviu de aproximação e fortalecimento para o grupo e para as duplas, acredito que fizemos um bom trabalho em dupla, nos esforçamos para fazermos o nosso melhor e nos fizemos presente nas reuniões. A parte mais difícil   que encontramos foi a parte do html, às vezes alguns erros relacionados ao banco de dados apareciam e dificultavam ainda mais a execução do html, achamos melhor deixarmos essa parte mais simples, porém eficaz.
-
-
-
+          Resultado: acho que o pair programming serviu de aproximação e fortalecimento para o grupo e para as duplas, acredito que fizemos um bom trabalho em dupla, nos esforçamos para fazermos o nosso melhor e nos fizemos presente nas reuniões. Nossas maiores dificuldades encontradas foram no html e css, às vezes alguns erros relacionados ao banco de dados apareciam e dificultavam ainda mais a execução do html, achamos melhor deixarmos essa parte mais simples, porém eficaz.

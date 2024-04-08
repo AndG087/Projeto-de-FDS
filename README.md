@@ -21,7 +21,8 @@ Link para o ScreenCast:
 <h1>Entrega 02</h1>
 
 Diagrama de atividade:
-Link do diagrama:
+![diagrama_ativo drawio](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/04ff9aa9-d87e-4982-be7a-66fdf5aa2076)
+Link do diagrama para melhor vizualização:
 https://drive.google.com/file/d/1U_2xaCYBRfLcilhWr1-Cr5JwiEZ48Ob9/view?usp=sharing
 
 Quadro da Sprint 01 e backlog do jira:

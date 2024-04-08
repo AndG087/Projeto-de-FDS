@@ -51,8 +51,6 @@ def signup(request):
         return redirect('login')
     
 
-def personuser(request):
-    return render(request,'personuser.html')
 
 
 def avaliacaogeral(request):
@@ -79,7 +77,7 @@ def avaliacaogeral(request):
 
 def home(request):
     if request.method == "GET":
-        return render(request, "home.html")
+        return render(request, "personuser.html")
     elif request.method == "POST":
         file = request.POST.get("my_file")
         descricao = request.POST.get("texto")

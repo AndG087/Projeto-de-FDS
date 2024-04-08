@@ -19,8 +19,8 @@ class Projeto(models.Model):
     
 class person(models.Model):
     title = models.CharField(max_length=20)
-    arq = models.URLField(max_length=200)
+    arq = models.URLField()
     descricao = models.CharField(max_length=500)
 
     def str(self) -> str:
-        return self.title
+        return self.nome

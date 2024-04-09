@@ -49,3 +49,19 @@ Feedbacks do pair programming:
   Lucas de Holanda e Vinicius Freitas:
           Realizamos o pair programming para implementar a história de personalização do usuário;
           Resultado: acho que o pair programming serviu de aproximação e fortalecimento para o grupo e para as duplas, acredito que fizemos um bom trabalho em dupla, nos esforçamos para fazermos o nosso melhor e nos fizemos presente nas reuniões. Nossas maiores dificuldades encontradas foram no html e css, às vezes alguns erros relacionados ao banco de dados apareciam e dificultavam ainda mais a execução do html, achamos melhor deixarmos essa parte mais simples, porém eficaz.
+
+Instruções de Acesso ao Site:
+
+Abra seu navegador da web preferido e vá para o site do Eye of Job. Você pode fazer isso digitando "https://eye-of-job.azurewebsites.net/" na barra de endereços do navegador e pressionando Enter.
+
+Digite seu nome de usuário no campo apropriado. Em seguida, digite sua senha no campo designado. Certifique-se de digitar suas credenciais corretamente para evitar erros de login.
+
+Após inserir suas credenciais, clique no botão "Logar"  abaixo dos campos de nome de usuário e senha. Isso enviará suas informações e tentará autenticar sua conta
+
+Se suas credenciais estiverem corretas, você será redirecionado para sua conta do Eye of Job, onde poderá começar a explorar e interagir com a plataforma.
+
+Caso for necessário Cadastrar-se no site, terá de clickar no "cadastrar-se", abaixo do botão de logar na tela inicial do site, na tela você terá de preencher as seguintes informações, Nome de Usuário, Email e Senha.
+
+Pós cadastro você será redirecionado a tela de login e executará os mesmos passos iniciais deste guia de intruções de acesso ao nosso site.
+
+Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferecem a opção de salvar suas informações de login para que você não precise digitá-las toda vez que visitar o site. No entanto, apenas faça isso em dispositivos pessoais e seguros.

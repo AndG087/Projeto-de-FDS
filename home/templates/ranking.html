@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking de Usuários</title>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            margin: 20px auto;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ranking de Usuários</h2>
+    {% for usuario in usuarios %}
+        {% for avaliacao in usuario.avaliacao_set.all %}
+            <div class="card">
+                <div class="container">
+                    <h4><b>Usuário: {{ usuario.username }}</b></h4>
+                    <p><b>Total de Avaliações:</b> {{ usuario.avaliacao_set.count }}</p>
+                    <p><b>Média de Avaliação:</b> 
+                        {% if usuario.avg_nota %}
+                            {{ usuario.avg_nota }}
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </p>
+                    <p><b>Avaliação:</b> {{ avaliacao.nota }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>

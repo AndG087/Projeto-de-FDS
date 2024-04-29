@@ -10,6 +10,7 @@ from rolepermissions.decorators import has_role_decorator, has_permission_decora
 from rolepermissions.permissions import revoke_permission
 from .models import person
 from .models import Projeto
+from django.db.models import Count, Avg
 
 @login_required(login_url="/login/")
 def inicio(request):
@@ -106,5 +107,20 @@ def meus_projetos(request):
     return render(request,'meus_projetos.html')
 
 
+def ranking(request):
+    # Obtendo todos os usuários e suas respectivas avaliações
+    usuarios = User.objects.annotate(num_avaliacoes=Count('avaliacao'))
+
+    # Calculando a média das notas de cada usuário
+    for usuario in usuarios:
+        avaliacoes_usuario = Avaliacao.objects.filter(user=usuario)
+        if avaliacoes_usuario.exists():
+            media = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
+            usuario.avg_nota = round(media, 1) if media is not None else None
+        else:
+            usuario.avg_nota = None
+
+    # Passando os usuários e suas avaliações para o template
+    return render(request, 'ranking.html', {'usuarios': usuarios})
 
 

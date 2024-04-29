@@ -1,0 +1,14 @@
+{
+  "name": "projeto-de-fds",
+  "version": "1.0.0",
+  "description": "Imagem do painel do sprint:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.8.1"
+  }
+}

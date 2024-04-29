@@ -1,8 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate
-from django.contrib.auth import login as logind
 from django.contrib.auth.decorators import login_required
 from .models import Avaliacao
 from rolepermissions.roles import assign_role
@@ -11,6 +7,12 @@ from rolepermissions.permissions import revoke_permission
 from .models import person
 from .models import Projeto
 from django.db.models import Count, Avg
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login as logind
+from django.http import HttpResponse
+from .models import Avaliacao, Projeto, person
+
+
 
 @login_required(login_url="/login/")
 def inicio(request):
@@ -106,6 +108,19 @@ def new_project(request):
 def meus_projetos(request):
     return render(request,'meus_projetos.html')
 
+@login_required(login_url="/login/")
+def search(request):
+    context = {}
+    search_term = request.GET.get('search')
+    if search_term:
+        # Realiza a busca de usuários e projetos com base no termo de pesquisa
+        users = User.objects.filter(username__icontains=search_term)
+        projects = Projeto.objects.filter(name__icontains=search_term)
+        context['users'] = users
+        context['projects'] = projects
+
+
+    return render(request, 'search.html', context)
 
 def ranking(request):
     # Obtendo todos os usuários e suas respectivas avaliações
@@ -122,5 +137,4 @@ def ranking(request):
 
     # Passando os usuários e suas avaliações para o template
     return render(request, 'ranking.html', {'usuarios': usuarios})
-
 

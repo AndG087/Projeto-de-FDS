@@ -1,0 +1,57 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye of Job - Busca</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'search.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="Eye">EYE OF JOB</h1>
+            <div class="linha-de-separacao"></div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'inicio' %}">Home</a></li>
+                    <li><a href="{% url 'personuser' %}">Perfil</a></li>
+                    <li><a href="{% url 'projetos' %}">Projetos</a></li>
+                    <li><a href="{% url 'search' %}">Pesquisa</a></li>
+                    <!-- Adicione mais links de navegação conforme necessário -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="search">
+        <form action="{% url 'search' %}" method="GET">
+            <input type="text" name="search" placeholder="Search..." required>
+            <button type="submit">Go</button>
+        </form>
+    </div>
+
+    {% if users %}
+        <div class="search-results">
+            <h2>Usuários encontrados:</h2>
+            <ul>
+                {% for user in users %}
+                    <li>{{ user.username }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+
+    {% if projects %}
+        <div class="search-results">    
+            <h2>Projetos encontrados:</h2>
+            <ul>
+                {% for project in projects %}
+                    <li>{{ project.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    </body>
+</html>

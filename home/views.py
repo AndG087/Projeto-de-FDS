@@ -140,5 +140,8 @@ def ranking(request):
         media = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
         usuario.avg_nota = round(media, 1) if media is not None else None
 
+    # Ordenando os usuários pela média das avaliações em ordem decrescente
+    usuarios = sorted(usuarios, key=lambda x: x.avg_nota if x.avg_nota is not None else float('-inf'), reverse=True)
+
     # Passando os usuários e suas informações para o template
     return render(request, 'ranking.html', {'usuarios': usuarios})

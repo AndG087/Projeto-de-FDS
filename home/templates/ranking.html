@@ -1,29 +1,33 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking de Usuários</title>
-    <style>
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.3s;
-            width: 40%;
-            margin: 20px auto;
-            border-radius: 5px;
-            padding: 20px;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
-
-        .container {
-            padding: 2px 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'ranking.css' %}">
+    
 </head>
 <body>
+
+    <header>
+        <div class="container">
+            <h1 id="Eye">EYE OF JOB</h1>
+            <div class="linha-de-separacao"></div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'inicio' %}">Home</a></li>
+                    <li><a href="{% url 'avaliacaogeral' %}">Avaliações</a></li>
+                    <li><a href="{% url 'projetos' %}">Projetos</a></li>
+                    <li><a href="{% url 'search' %}">Pesquisa</a></li>
+                    <!-- Adicione mais links de navegação conforme necessário -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
     <h2>Ranking de Usuários</h2>
     {% for usuario in usuarios %}
         {% for avaliacao in usuario.avaliacao_set.all %}

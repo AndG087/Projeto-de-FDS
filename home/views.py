@@ -128,19 +128,17 @@ def search(request):
 
     return render(request, 'search.html', context)
 
+
 def ranking(request):
     # Obtendo todos os usuários e suas respectivas avaliações
     usuarios = User.objects.annotate(num_avaliacoes=Count('avaliacao'))
 
-    # Calculando a média das notas de cada usuário
+    # Calculando a média das notas recebidas por cada usuário e o total de avaliações feitas daquela pessoa
     for usuario in usuarios:
-        avaliacoes_usuario = Avaliacao.objects.filter(user=usuario)
-        if avaliacoes_usuario.exists():
-            media = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
-            usuario.avg_nota = round(media, 1) if media is not None else None
-        else:
-            usuario.avg_nota = None
+        avaliacoes_usuario = Avaliacao.objects.filter(funcionario_nome=usuario.username)
+        usuario.num_avaliacoes = avaliacoes_usuario.count()  # Contagem das avaliações recebidas
+        media = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
+        usuario.avg_nota = round(media, 1) if media is not None else None
 
-    # Passando os usuários e suas avaliações para o template
+    # Passando os usuários e suas informações para o template
     return render(request, 'ranking.html', {'usuarios': usuarios})
-

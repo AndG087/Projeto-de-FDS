@@ -30,22 +30,21 @@
 
     <h2>Ranking de Usuários</h2>
     {% for usuario in usuarios %}
-        {% for avaliacao in usuario.avaliacao_set.all %}
-            <div class="card">
-                <div class="container">
-                    <h4><b>Usuário: {{ usuario.username }}</b></h4>
-                    <p><b>Total de Avaliações:</b> {{ usuario.avaliacao_set.count }}</p>
-                    <p><b>Média de Avaliação:</b> 
-                        {% if usuario.avg_nota %}
-                            {{ usuario.avg_nota }}
-                        {% else %}
-                            N/A
-                        {% endif %}
-                    </p>
-                    <p><b>Avaliação:</b> {{ avaliacao.nota }}</p>
-                </div>
+        <div class="card">
+            <div class="container">
+                <h4><b>Usuário: {{ usuario.username }}</b></h4>
+                <p><b>Total de Avaliações:</b> {{ usuario.num_avaliacoes }}</p>
+                <p><b>Média de Avaliação:</b> 
+                    {% if usuario.avg_nota %}
+                        {{ usuario.avg_nota }}
+                    {% else %}
+                        N/A
+                    {% endif %}
+                </p>
             </div>
-        {% endfor %}
+        </div>
     {% endfor %}
+
+
 </body>
 </html>

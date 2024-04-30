@@ -67,6 +67,18 @@
                             </div> 
                         </div>
                         <br>
+                        <h1>Seus projetos</h1>
+                        <ul>
+                            {% for trabalho in trabalhos %}
+                                <li>Nome do projeto: {{ trabalho.name }}
+                                <br>
+                                Descrição: {{ trabalho.description}}
+                                <br>
+                                Participantes: {{ trabalho.participants}}
+                                </li>
+                                <br>
+                            {% endfor %}
+                        </ul>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Salvar alterações</button>
                             <button type="button" class="btn btn-secondary">Cancelar</button>

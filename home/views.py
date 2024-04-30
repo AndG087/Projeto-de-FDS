@@ -61,7 +61,7 @@ def avaliacaogeral(request):
         funcionario_nome = request.POST.get('funcionario_name')
         nota = float(request.POST.get('rate'))
         try:
-            user = User.objects.get(username=funcionario_nome)
+            user = request.user
             avaliacao = Avaliacao(funcionario_nome=funcionario_nome, nota=nota, user=user)
             avaliacao.save()
             return HttpResponse('avaliacao_sucesso')
@@ -70,7 +70,7 @@ def avaliacaogeral(request):
             return HttpResponse('Usuário não encontrado')
     
     # Obtendo todas as avaliações do banco de dados
-    avaliacoes = Avaliacao.objects.all()
+    avaliacoes = Avaliacao.objects.filter(user=request.user)
     usuarios = User.objects.all()
     
     # Passando as avaliações para o template
@@ -80,7 +80,12 @@ def avaliacaogeral(request):
 
 def home(request):
     if request.method == "GET":
-        return render(request, "personuser.html")
+        trabalhos = Projeto.objects.filter(usuario_id=request.user.id)
+        contexto = {
+            'trabalhos':trabalhos,
+            'user':request.user,
+        }
+        return render(request, "personuser.html",contexto)
     elif request.method == "POST":
         file = request.POST.get("my_file")
         descricao = request.POST.get("texto")
@@ -98,8 +103,9 @@ def new_project(request):
         name = request.POST.get('name')
         description = request.POST.get('description')
         participants = request.POST.get('participants')
+        usuario = request.user
         
-        project = Projeto.objects.create(name=name, description=description, participants=participants)
+        project = Projeto(name=name, description=description, participants=participants,usuario=usuario)
         project.save()
         return HttpResponse('Projeto criado com sucesso!') 
     else:

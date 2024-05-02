@@ -30,7 +30,7 @@
             <button type="submit">Go</button>
         </form>
     </div>
-
+    
     {% if users %}
         <div class="search-results">
             <h2>Usuários encontrados:</h2>
@@ -41,8 +41,7 @@
             </ul>
         </div>
     {% endif %}
-
-
+    
     {% if projects %}
         <div class="search-results">    
             <h2>Projetos encontrados:</h2>
@@ -53,5 +52,13 @@
             </ul>
         </div>
     {% endif %}
+    
+    {% if not users and not projects and request.GET.search %}
+        <div class="search-results">
+            <h2>Nenhum resultado com esse nome</h2>
+        </div>
+    {% endif %}
+
+    
     </body>
 </html>

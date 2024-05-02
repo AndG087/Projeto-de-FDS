@@ -68,17 +68,24 @@
                         </div>
                         <br>
                         <h1>Seus projetos</h1>
-                        <ul>
-                            {% for trabalho in trabalhos %}
-                                <li>Nome do projeto: {{ trabalho.name }}
-                                <br>
-                                Descrição: {{ trabalho.description}}
-                                <br>
-                                Participantes: {{ trabalho.participants}}
-                                </li>
-                                <br>
-                            {% endfor %}
-                        </ul>
+                        
+                        {% if trabalhos %}
+                        {% for trabalho in trabalhos %}
+                        <div style ="padding-top: 5%">
+                        <div class="card" style="width: 18rem">
+                            <div class="card-body">
+    
+                              <h5 class="card-title">{{ trabalho.name }}</h5>
+                              <p class="card-text">Descrição: {{ trabalho.description}}</p>
+                              <p class="card-text">Participantes: {{ trabalho.participants}}</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+                        <br>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Salvar alterações</button>
                             <button type="button" class="btn btn-secondary">Cancelar</button>

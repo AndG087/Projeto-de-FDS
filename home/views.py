@@ -60,13 +60,13 @@ def avaliacaogeral(request):
     if request.method == 'POST':
         funcionario_nome = request.POST.get('funcionario_name')
         nota = float(request.POST.get('rate'))
+        user_id = request.POST.get('user_id')
         try:
-            user = request.user
+            user = User.objects.get(id=user_id)
             avaliacao = Avaliacao(funcionario_nome=funcionario_nome, nota=nota, user=user)
             avaliacao.save()
             return HttpResponse('avaliacao_sucesso')
         except User.DoesNotExist:
-            error_message = "Usuário não encontrado. Por favor, verifique o nome de usuário e tente novamente."
             return HttpResponse('Usuário não encontrado')
     
     # Obtendo todas as avaliações do banco de dados

@@ -4,7 +4,7 @@
     width: 40%;
     margin: 20px auto;
     border-radius: 5px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .card:hover {
@@ -79,3 +79,11 @@ h2{
     text-align: center;
     padding-top: 2%;
 }
+
+
+  .avaliacoes .avaliacao-rating {
+    color: orange;
+    opacity: 0.6;
+    filter: drop-shadow(0 0 4px);
+  }
+  

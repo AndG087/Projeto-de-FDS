@@ -80,16 +80,17 @@ def avaliacaogeral(request):
 
 def home(request):
     if request.method == "GET":
-        trabalhos = Projeto.objects.filter(usuario_id=request.user.id)
+        # Filtrar os projetos onde o usuário atual está listado como participante
+        trabalhos = Projeto.objects.filter(participants__icontains=request.user.username)
         contexto = {
             'trabalhos':trabalhos,
             'user':request.user,
         }
-        return render(request, "personuser.html",contexto)
+        return render(request, "personuser.html", contexto)
     elif request.method == "POST":
+        # Aqui você pode processar o envio de arquivos, se necessário
         file = request.POST.get("my_file")
         descricao = request.POST.get("texto")
-        
         
         mf = person(title="minha_imagem", arq=file,descricao=descricao)
         mf.save()
@@ -111,8 +112,10 @@ def new_project(request):
     else:
         return render(request, 'projetos.html')
 
+
 def meus_projetos(request):
     return render(request,'meus_projetos.html')
+
 
 @login_required(login_url="/login/")
 def search(request):

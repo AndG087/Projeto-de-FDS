@@ -1,13 +1,14 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking de Usuários</title>
-    <link rel="stylesheet" href="{% static 'rankings.css' %}">
+    <link rel="stylesheet" href="{% static 'rank.css' %}">
     
 </head>
+
 <body>
 
     <header>
@@ -32,15 +33,47 @@
     {% for usuario in usuarios %}
         <div class="card">
             <div class="container">
-                <h4><b>Usuário: {{ usuario.username }}</b></h4>
-                <p><b>Total de Avaliações:</b> {{ usuario.num_avaliacoes }}</p>
-                <p><b>Média de Avaliação:</b> 
+                <h4><b>Posição: {{ forloop.counter }}</b></h4>
+                <h4>Usuário: {{ usuario.username }}</h4>
+                <p>Total de Avaliações: {{ usuario.num_avaliacoes }}</p>
+                <div class="avaliacoes">
+                <p>Média de Avaliação:
+                    
+                        <span class="avaliacao-rating">
+                            {% if usuario.avg_nota >= 1 %}
+                                &#9733; <!-- Estrela preenchida -->
+                            {% else %}
+                                &#9734; <!-- Estrela vazia -->
+                            {% endif %}
+                            {% if usuario.avg_nota >= 2 %}
+                                &#9733; <!-- Estrela preenchida -->
+                            {% else %}
+                                &#9734; <!-- Estrela vazia -->
+                            {% endif %}
+                            {% if usuario.avg_nota >= 3 %}
+                                &#9733; <!-- Estrela preenchida -->
+                            {% else %}
+                                &#9734; <!-- Estrela vazia -->
+                            {% endif %}
+                            {% if usuario.avg_nota >= 4 %}
+                                &#9733; <!-- Estrela preenchida -->
+                            {% else %}
+                                &#9734; <!-- Estrela vazia -->
+                            {% endif %}
+                            {% if usuario.avg_nota >= 5 %}
+                                &#9733; <!-- Estrela preenchida -->
+                            {% else %}
+                                &#9734; <!-- Estrela vazia -->
+                            {% endif %}
+                        </span>
+                    
                     {% if usuario.avg_nota %}
-                        {{ usuario.avg_nota }}
+                       ({{ usuario.avg_nota }})
                     {% else %}
                         N/A
                     {% endif %}
                 </p>
+                </div>
             </div>
         </div>
     {% endfor %}

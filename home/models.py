@@ -4,10 +4,13 @@ from django.contrib.auth.models import User
 
 
 
-class Avaliacao(models.Model):
-    funcionario_nome = models.CharField(max_length=100)
+class Avaliacao3(models.Model):
+    avaliador = models.CharField(max_length=150)  # Campo para armazenar o nome do usuário que fez a avaliação
+    avaliado = models.CharField(max_length=100)
     nota = models.IntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
 
 class Projeto(models.Model):
     name = models.CharField(max_length=100)

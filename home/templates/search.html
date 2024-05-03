@@ -51,18 +51,46 @@
 
         </div>
             
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-top: 2%;">
-                {% for trabalho in projects %}
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ trabalho.name }}</h5>
-                        <p class="card-text"><b>Descrição:</b> {{ trabalho.description }}</p>
-                        <p class="card-text"><b>Participantes:</b> {{ trabalho.participants }}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding-top: 2%;">
+            {% for trabalho in projects %}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ trabalho.name }}</h5>
+        
+                    <p class="card-text"><b>Descrição:</b><br>'Ver mais' para mais detalhes</p>
+        
+                    <p class="card-text"><b>Participantes:</b><br>{{ trabalho.participants }}</p>
+        
+        
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{ trabalho.id }}">Ver mais</button>
+        
+        
+                    <div class="modal fade" id="exampleModal{{ trabalho.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{ trabalho.name }}</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    {{ trabalho.description }}
+                                    <br><br>
+                                    <b>Participantes:</b>
+                                    {{ trabalho.participants }}
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+        
+        
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
+        </div>
+        
 
     {% endif %}
     
@@ -73,5 +101,13 @@
     {% endif %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+    <script>
+        const myModal = document.getElementById('myModal');
+        const myInput = document.getElementById('myInput');
+    
+        myModal.addEventListener('shown.bs.modal', () => {
+          myInput.focus();
+        });
+      </script>
+</body>
 </html>

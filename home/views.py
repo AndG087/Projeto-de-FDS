@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Avaliacao
 from rolepermissions.roles import assign_role
 from rolepermissions.decorators import has_role_decorator, has_permission_decorator
 from rolepermissions.permissions import revoke_permission
@@ -9,7 +8,7 @@ from django.db.models import Count, Avg
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as logind
 from django.http import HttpResponse
-from .models import Avaliacao, Projeto, Foto, Descricao
+from .models import Avaliacao3, Projeto, Foto, Descricao
 
 
 
@@ -57,26 +56,29 @@ def signup(request):
 
 
 
+@login_required(login_url="/login/")
 def avaliacaogeral(request):
     if request.method == 'POST':
-        funcionario_nome = request.POST.get('funcionario_name')
+        avaliado = request.POST.get('avaliado')
         nota = float(request.POST.get('rate'))
-        user_id = request.POST.get('user_id')
+        avaliador = request.user.username  # Nome de usuário do usuário logado
+
         try:
-            user = User.objects.get(id=user_id)
-            avaliacao = Avaliacao(funcionario_nome=funcionario_nome, nota=nota, user=user)
+            user = User.objects.get(username=avaliado)
+            avaliacao = Avaliacao3(avaliador=avaliador, avaliado=avaliado, nota=nota, user=user)
             avaliacao.save()
             return HttpResponse('avaliacao_sucesso')
         except User.DoesNotExist:
             return HttpResponse('Usuário não encontrado')
     
-    # Obtendo todas as avaliações do banco de dados
-    avaliacoes = Avaliacao.objects.filter(user=request.user)
+    # Obtendo todas as avaliações do banco de dados em que o usuário logado é o avaliador
+    avaliacoes = Avaliacao3.objects.filter(avaliador=request.user.username)
+    
+    # Obtendo todos os usuários
     usuarios = User.objects.all()
     
     # Passando as avaliações para o template
-    return render(request, 'avaliacaogeral.html', {'avaliacoes': avaliacoes,'usuarios': usuarios})
-
+    return render(request, 'avaliacaogeral.html', {'avaliacoes': avaliacoes, 'usuarios': usuarios})
 
 
 
@@ -168,11 +170,11 @@ def search(request):
 
 def ranking(request):
     # Obtendo todos os usuários e suas respectivas avaliações
-    usuarios = User.objects.annotate(num_avaliacoes=Count('avaliacao'))
+    usuarios = User.objects.annotate(num_avaliacoes=Count('avaliacao3'))
 
     # Calculando a média das notas recebidas por cada usuário e o total de avaliações feitas daquela pessoa
     for usuario in usuarios:
-        avaliacoes_usuario = Avaliacao.objects.filter(funcionario_nome=usuario.username)
+        avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=usuario.username)
         usuario.num_avaliacoes = avaliacoes_usuario.count()  # Contagem das avaliações recebidas
         media = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
         usuario.avg_nota = round(media, 1) if media is not None else None

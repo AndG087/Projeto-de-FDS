@@ -48,8 +48,8 @@
 <div class="formulario">
     <form method="post" action="{% url 'avaliacaogeral' %}">
         {% csrf_token %}
-        <label for="funcionario_name">Nome do Funcionário:</label>
-        <input type="text" id="funcionario_name" name="funcionario_name" required><br><br>
+        <label for="avaliado">Nome do Funcionário:</label>
+        <input type="text" id="avaliado" name="avaliado" required><br><br>
         
         <div class="rating">
             <input type='radio' hidden name='rate' id='rating_5' data-idx='0' value='5'>	
@@ -94,7 +94,7 @@
     <ul>
         {% for avaliacao in avaliacoes %}
             <li class="avaliacao-item">
-                {{ avaliacao.funcionario_nome }} - 
+                {{ avaliacao.avaliado }} - 
                 <span class="avaliacao-rating">
                     {% if avaliacao.nota >= 1 %}
                         &#9733; <!-- Estrela preenchida -->

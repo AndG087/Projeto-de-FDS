@@ -18,10 +18,14 @@ class Projeto(models.Model):
     def _str_ (self) -> str:
         return self.nome
     
-class person(models.Model):
-    title = models.CharField(max_length=20)
+class Foto(models.Model):
     arq = models.URLField()
-    descricao = models.CharField(max_length=500)
-
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    def str(self) -> str:
+        return self.nome
+    
+class Descricao(models.Model):
+    descricao = models.TextField()
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     def str(self) -> str:
         return self.nome

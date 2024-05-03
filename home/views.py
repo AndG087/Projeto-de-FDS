@@ -4,13 +4,12 @@ from .models import Avaliacao
 from rolepermissions.roles import assign_role
 from rolepermissions.decorators import has_role_decorator, has_permission_decorator
 from rolepermissions.permissions import revoke_permission
-from .models import person
 from .models import Projeto
 from django.db.models import Count, Avg
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as logind
 from django.http import HttpResponse
-from .models import Avaliacao, Projeto, person
+from .models import Avaliacao, Projeto, Foto, Descricao
 
 
 
@@ -86,22 +85,47 @@ def home(request):
     if request.method == "GET":
         # Filtrar os projetos onde o usuário atual está listado como participante
         trabalhos = Projeto.objects.filter(participants__icontains=request.user.username)
+        foto = Foto.objects.filter(usuario_id=request.user.id).order_by('-id').first()
+            
+        descricao = Descricao.objects.filter(usuario_id=request.user.id).order_by('-id').first()
         contexto = {
             'trabalhos':trabalhos,
+            'foto':foto,
+            'descricao':descricao,
             'user':request.user,
         }
         return render(request, "personuser.html", contexto)
+    
+def editar_perfil(request):
+    if request.method == "GET":
+        return render(request, "editar_perfil.html")
+   
     elif request.method == "POST":
-        # Aqui você pode processar o envio de arquivos, se necessário
-        file = request.POST.get("my_file")
-        descricao = request.POST.get("texto")
+
+        foto = request.POST.get("foto")
+        descricao = request.POST.get("informacoes_usuario")
+        usuario = request.user
         
-        mf = person(title="minha_imagem", arq=file,descricao=descricao)
-        mf.save()
+        if not foto and not descricao:
+            return redirect('personuser')
         
-        print(file)
+        elif not foto:
+            descricao = Descricao(descricao=descricao,usuario=usuario)
+            descricao.save()
+            return redirect('personuser')
+            
+        elif not descricao:
+            foto = Foto(arq=foto,usuario=usuario)
+            foto.save()
+            return redirect('personuser')
+         
         
-        return HttpResponse('Foto e informação enviada com sucesso!')
+        foto = Foto(arq=foto,usuario=usuario)
+        descricao = Descricao(descricao=descricao,usuario=usuario)
+        foto.save()
+        descricao.save()
+        
+        return redirect('personuser')
     
 
 

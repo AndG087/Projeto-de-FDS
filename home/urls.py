@@ -11,5 +11,5 @@ urlpatterns = [
     path('meus_projetos/', views.meus_projetos, name ="meus_projetos"),
     path('ranking/', views.ranking, name ="ranking"),
     path('search/', views.search, name ="search"),
-    
+    path('edit_personuser/', views.editar_perfil, name ="edit_personuser"),
 ]

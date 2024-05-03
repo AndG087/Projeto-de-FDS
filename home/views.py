@@ -98,6 +98,7 @@ def home(request):
         }
         return render(request, "personuser.html", contexto)
     
+
 def editar_perfil(request):
     if request.method == "GET":
         return render(request, "editar_perfil.html")

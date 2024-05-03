@@ -69,7 +69,7 @@
                         <hr class="badge-primary mt-0 w-25">
                         <div class="row">
                             <div class="col-sm-6">
-                                <p class="font-weight-bold">Informações de usuário</p>
+                                <p class="font-weight-bold">Informações de usuário:</p>
                                 <p>{{descricao.descricao}}</p>
                             </div>
                             <div class="col-sm-6">
@@ -78,7 +78,7 @@
                         </div>
                         <br>
                         <hr class="bg-primary"> 
-                        <p class="font-weight-bold">Seus projetos</p>
+                        <p class="font-weight-bold">Seus projetos:</p>
                         {% if trabalhos %}
                         {% for trabalho in trabalhos %}
                         <div style ="padding-top: 5%">
@@ -86,17 +86,46 @@
                             <div class="card-body">
     
                               <h5 class="card-title">{{ trabalho.name }}</h5>
-                              <p class="card-text"><b>Descrição:</b> {{ trabalho.description}}</p>
+                              <p class="card-text"><b>Descrição:</b> 'Ver mais' para mais detalhes</p>
                               <p class="card-text"><b>Participantes:</b> {{ trabalho.participants}}</p>
-                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{ trabalho.id }}">Ver mais</button>
                               
                             </div>
+
+                            <div class="modal fade" id="exampleModal{{ trabalho.id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ trabalho.name }}</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            {{ trabalho.description }}
+                                            <br><br>
+                                            <b>Participantes:</b>
+                                            {{ trabalho.participants }}
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                           </div>
                         </div>
                         {% endfor %}
-                        {% endif %}
+                        {% else %}
                         
-                        <a href="{% url 'edit_personuser' %}"><button type="submit" class="btn btn-primary">Editar perfil</button></a>
+                        <div class="search-results">
+                            <h3>Você não faz parte de nenhum projeto</h3>
+                        </div>
+                        
+                        {% endif %}
+
+                    
+                        <br><br>
+                        <a href="{% url 'edit_personuser' %}" style = 'display: flex;justify-content: center;'><button type="submit" class="btn btn-primary">Editar perfil</button></a>
                         <br>
                         </div>    
                     </div>
@@ -118,5 +147,14 @@
             reader.readAsDataURL(input.files[0]);
         }
     </script>
+
+    <script>
+        const myModal = document.getElementById('myModal');
+        const myInput = document.getElementById('myInput');
+    
+        myModal.addEventListener('shown.bs.modal', () => {
+          myInput.focus();
+        });
+      </script>
 </body>
 </html>

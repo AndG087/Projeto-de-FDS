@@ -12,6 +12,19 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
+
+    <meta charset="UTF-8">
+    <style>
+        .foto-quadrada {
+            width: 150px;
+            height: 150px;  
+            object-fit: cover;
+        }
+
+        .foto-redonda {
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body class="bg-light">
@@ -41,7 +54,7 @@
                     <div class="col-sm-4 bg-info rounded-left">
                         <div class="card-block text-center text-white">
                             {% if foto.arq %}
-                                <img src="{{ foto.arq }}" alt="Imagem do Perfil">
+                            <img src="{{ foto.arq }}" alt="Imagem do Perfil" class="foto-quadrada foto-redonda" >
                             {% else %}
                                 <p>Imagem não disponível</p>
                             {% endif %}

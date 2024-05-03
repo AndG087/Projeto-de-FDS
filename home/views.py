@@ -34,6 +34,8 @@ def login(request):
             return redirect('inicio')
         else:
             return HttpResponse("Nome ou senha incorretos")
+        
+        
             
 def signup(request):
     if request.method == "GET":
@@ -78,6 +80,8 @@ def avaliacaogeral(request):
 
 
 
+
+
 def home(request):
     if request.method == "GET":
         # Filtrar os projetos onde o usuário atual está listado como participante
@@ -98,6 +102,9 @@ def home(request):
         print(file)
         
         return HttpResponse('Foto e informação enviada com sucesso!')
+    
+
+
     
 def new_project(request):
     if request.method == 'POST':
@@ -130,6 +137,9 @@ def search(request):
 
 
     return render(request, 'search.html', context)
+
+
+
 
 
 def ranking(request):

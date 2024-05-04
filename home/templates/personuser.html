@@ -12,6 +12,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
+    <style>
+
+            .avaliacao-rating {
+            color: yellow;
+          }
+
+
+    </style>
+
 
     <meta charset="UTF-8">
     <style>
@@ -60,6 +69,42 @@
                                 <p>Imagem não disponível</p>
                             {% endif %}
                             <h2 class="font-weight-bold mt-4">{{user}}</h2>
+                            
+                            <span class="avaliacao-rating">
+                                {% if media_avaliacoes >= 1 %}
+                                    &#9733; <!-- Estrela preenchida -->
+                                {% else %}
+                                    &#9734; <!-- Estrela vazia -->
+                                {% endif %}
+                                {% if media_avaliacoes >= 2 %}
+                                &#9733; <!-- Estrela preenchida -->
+                                {% else %}
+                                    &#9734; <!-- Estrela vazia -->
+                                {% endif %}
+                                {% if media_avaliacoes >= 3 %}
+                                    &#9733; <!-- Estrela preenchida -->
+                                {% else %}
+                                    &#9734; <!-- Estrela vazia -->
+                                {% endif %}
+                                {% if media_avaliacoes >= 4 %}
+                                    &#9733; <!-- Estrela preenchida -->
+                                {% else %}
+                                    &#9734; <!-- Estrela vazia -->
+                                {% endif %}
+                                {% if media_avaliacoes >= 5 %}
+                                    &#9733; <!-- Estrela preenchida -->
+                                {% else %}
+                                    &#9734; <!-- Estrela vazia -->
+                                {% endif %}
+
+                            </span>
+
+                            {% if media_avaliacoes %}
+                            ({{ media_avaliacoes }})
+                         {% else %}
+                             N/A
+                         {% endif %}
+                            
                             <p>Nome empresa</p>
                            
                             {% comment %} Adicionar imagem {% endcomment %}

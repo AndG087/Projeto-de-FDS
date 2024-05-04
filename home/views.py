@@ -92,12 +92,20 @@ def home(request):
         foto = Foto.objects.filter(usuario_id=request.user.id).order_by('-id').first()
             
         descricao = Descricao.objects.filter(usuario_id=request.user.id).order_by('-id').first()
+        
+        # Calcular a média das avaliações recebidas pelo usuário logado
+        avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=request.user.username)
+        media_avaliacoes = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
+        media_avaliacoes = round(media_avaliacoes, 1) if media_avaliacoes is not None else None
+        
         contexto = {
-            'trabalhos':trabalhos,
-            'foto':foto,
-            'descricao':descricao,
-            'user':request.user,
+            'trabalhos': trabalhos,
+            'foto': foto,
+            'descricao': descricao,
+            'user': request.user,
+            'media_avaliacoes': media_avaliacoes,
         }
+        
         return render(request, "personuser.html", contexto)
     
 
@@ -187,3 +195,4 @@ def ranking(request):
 
     # Passando os usuários e suas informações para o template
     return render(request, 'ranking.html', {'usuarios': usuarios})
+    

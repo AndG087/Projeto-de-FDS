@@ -31,7 +31,7 @@ Quadro da Sprint 01 e backlog do jira:
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/deeb68b4-b6eb-4dee-a441-afc62f5e5a7f)
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/8df90cdf-8b42-4235-9d98-a4834284e09b)
 
-Link do screencast: (https://youtu.be/EVDKA4HIgY0)
+Link do screencast(Lo-fi): (https://youtu.be/EVDKA4HIgY0)
 
 Feedbacks do pair programming:
 

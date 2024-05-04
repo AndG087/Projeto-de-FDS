@@ -102,7 +102,7 @@ def home(request):
 def editar_perfil(request):
     if request.method == "GET":
         return render(request, "editar_perfil.html")
-   
+    
     elif request.method == "POST":
 
         foto = request.POST.get("foto")

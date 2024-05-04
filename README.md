@@ -18,9 +18,20 @@ Link para o prototipo de Lo-fi:
 Link para o ScreenCast(Lo-fi):
 (https://youtu.be/wk1WEvwAZXU)
 
-<h1>Entrega 02</h1>
 
-Diagrama de atividade:
+<details>
+<summary><h2>1- Entrega</h2></summary>
+<ul>
+    <li><a href="https://www.youtube.com/watch?v=0sU1ZieJ0rc">Screencast</a></li>
+    <h3>Quadro do Jira:</h3>
+    <img src="prints/Backlog_Primeira-Entrega.jpeg"/>
+    <img src="prints/Quadro_Primeira_Entrega.png"/>
+</ul>
+</details>
+<details>
+<summary><h2>2- Entrega</h2></summary>
+<ul>
+    Diagrama de atividade:
 ![diagrama_ativo drawio](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/04ff9aa9-d87e-4982-be7a-66fdf5aa2076)
 Link do diagrama para melhor vizualização:
 https://drive.google.com/file/d/1U_2xaCYBRfLcilhWr1-Cr5JwiEZ48Ob9/view?usp=sharing
@@ -65,10 +76,12 @@ Caso for necessário Cadastrar-se no site, terá de clickar no "cadastrar-se", a
 Pós cadastro você será redirecionado a tela de login e executará os mesmos passos iniciais deste guia de intruções de acesso ao nosso site.
 
 Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferecem a opção de salvar suas informações de login para que você não precise digitá-las toda vez que visitar o site. No entanto, apenas faça isso em dispositivos pessoais e seguros.
-
-<h1>Entrega 03</h1>
-
-Imagem do Painel da sprint e do Backlog:
+</ul>
+</details>
+<details>
+<summary><h2>3- Entrega</h2></summary>
+<ul>
+    Imagem do Painel da sprint e do Backlog:
 
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/c1469aed-f9e6-4be7-aa74-295bade9866d)
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/286a59ef-0e6c-4a9b-b1fe-3723e3ebdb70)
@@ -80,3 +93,5 @@ link dos diagramas de atividade:
 1° : https://drive.google.com/file/d/1mudpvwloSvSkCmr0pP2KKjSVLK8FhvdA/view?usp=drive_link 
 
 2° :  https://drive.google.com/file/d/1U_2xaCYBRfLcilhWr1-Cr5JwiEZ48Ob9/view?usp=drive_link 
+</ul>
+</details>

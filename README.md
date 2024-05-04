@@ -1,6 +1,6 @@
 # Projeto-de-FDS
 
-Imagem do painel do sprint:
+Imagem do Painel da sprint:
 
 ![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/bc6886ab-20ae-4845-93aa-b994532d6dd6)
 ![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/3027a2ba-ac55-412d-b1bd-118402048b0d)
@@ -67,3 +67,10 @@ Pós cadastro você será redirecionado a tela de login e executará os mesmos p
 Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferecem a opção de salvar suas informações de login para que você não precise digitá-las toda vez que visitar o site. No entanto, apenas faça isso em dispositivos pessoais e seguros.
 
 <h1>Entrega 03</h1>
+
+Imagem do Painel da sprint e do Backlog:
+
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/c1469aed-f9e6-4be7-aa74-295bade9866d)
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/286a59ef-0e6c-4a9b-b1fe-3723e3ebdb70)
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/c4e8c287-08b4-42e4-bfed-ddf5a12f19a3)
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/28003044-4308-487b-bc97-7d96d1e66834)

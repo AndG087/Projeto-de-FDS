@@ -15,7 +15,7 @@ Imagem do Backlog:
 Link para o prototipo de Lo-fi:
 (https://www.figma.com/proto/SrLadAJxEpLGuKsHno4niq/Eye-of-job-Lo-fi?type=design&node-id=14-26&t=bsnGAWvmnlMsRVlU-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=14%3A26&mode=design)
 
-Link para o ScreenCast:
+Link para o ScreenCast(Lo-fi):
 (https://youtu.be/wk1WEvwAZXU)
 
 <h1>Entrega 02</h1>
@@ -31,7 +31,7 @@ Quadro da Sprint 01 e backlog do jira:
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/deeb68b4-b6eb-4dee-a441-afc62f5e5a7f)
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/8df90cdf-8b42-4235-9d98-a4834284e09b)
 
-Link do screencast(Lo-fi): (https://youtu.be/EVDKA4HIgY0)
+Link do screencast(Site): (https://youtu.be/EVDKA4HIgY0)
 
 Feedbacks do pair programming:
 

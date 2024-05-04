@@ -9,6 +9,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as logind
 from django.http import HttpResponse
 from .models import Avaliacao3, Projeto, Foto, Descricao
+from django.http import JsonResponse
+
 
 
 
@@ -142,7 +144,7 @@ def new_project(request):
         
         project = Projeto(name=name, description=description, participants=participants,usuario=usuario)
         project.save()
-        return HttpResponse('Projeto criado com sucesso!') 
+        return JsonResponse({'success': True}) # Retorna uma resposta JSON indicando sucesso
     else:
         return render(request, 'projetos.html')
 

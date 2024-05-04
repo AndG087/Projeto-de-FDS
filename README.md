@@ -89,9 +89,9 @@ Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferece
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/28003044-4308-487b-bc97-7d96d1e66834)
 
 Diagrama de atividade:
-link dos diagramas de atividade:
-1° : https://drive.google.com/file/d/1mudpvwloSvSkCmr0pP2KKjSVLK8FhvdA/view?usp=drive_link 
+Diagrama de Atividade(Funcionario): ![image](https://github.com/AndG087/Projeto-de-FDS/assets/128396955/43c747f0-76dd-4bda-bd02-037ae8102ef3)
 
-2° :  https://drive.google.com/file/d/1U_2xaCYBRfLcilhWr1-Cr5JwiEZ48Ob9/view?usp=drive_link 
+Diagrama de Atividade(Adiministrador): ![image](https://github.com/AndG087/Projeto-de-FDS/assets/128396955/fc941f52-55ce-4565-92dc-3b4cc83f20dc)
+
 </ul>
 </details>

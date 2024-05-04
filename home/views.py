@@ -69,9 +69,9 @@ def avaliacaogeral(request):
             user = User.objects.get(username=avaliado)
             avaliacao = Avaliacao3(avaliador=avaliador, avaliado=avaliado, nota=nota, user=user)
             avaliacao.save()
-            return HttpResponse('avaliacao_sucesso')
+            return JsonResponse({'status': 'success'})  # Retorna uma resposta JSON indicando sucesso
         except User.DoesNotExist:
-            return HttpResponse('Usuário não encontrado')
+            return JsonResponse({'status': 'error', 'message': 'Usuário não encontrado'})  # Retorna uma resposta JSON indicando erro
     
     # Obtendo todas as avaliações do banco de dados em que o usuário logado é o avaliador
     avaliacoes = Avaliacao3.objects.filter(avaliador=request.user.username)

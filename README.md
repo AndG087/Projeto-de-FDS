@@ -105,7 +105,7 @@ Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferece
 
 <h2>Screencast(Testes Automatizados):</h2> https://youtu.be/HC7Ads9A62M
 <h2>Feedbacks do Pair Programming:</h2>
-<h2>Lucas de Holanda e Arthur Vinícius:</h2>
+<h3>Lucas de Holanda e Arthur Vinícius:</h3>
  <p>Realizamos o pair progamming para implementar a história de Projetos Pessoais, onde seria possível visualizar os projetos que cada funcionário estaria participando;
 Resultado: Acreditamos que o uso do pair programming aumentou o nosso conhecimento sobre o framework, css e html. Encontramos algumas dificuldades pelo caminho, por exemplo: fazer os projetos dos usuários específicos aparecerem só para eles mesmos;  fazer essas informações (nome do projeto, participantes, descrição) adequadamente na tela do usuário. Consideramos que a dupla facilitou muito mais o trabalho, sempre um ajudando o outro, evoluímos no decorrer do trabalho;</p>
 </ul>

@@ -104,7 +104,8 @@ Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferece
 
 
 <h2>Screencast(Testes Automatizados):</h2> https://youtu.be/HC7Ads9A62M
-<h2>Screencast(Testes Automatizados):</h2> https://youtu.be/Rra837wvXrA
+<h2>Screencast(Deployment):</h2> https://youtu.be/Rra837wvXrA
+<h2>Screencat(Lo-Fi):</h2> https://www.youtube.com/watch?v=5cxp0Q95S-8
 <h2>Feedbacks do Pair Programming:</h2>
 <h3>Lucas de Holanda e Arthur Vinícius:</h3>
  <p>Realizamos o pair progamming para implementar a história de Projetos Pessoais, onde seria possível visualizar os projetos que cada funcionário estaria participando;

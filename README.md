@@ -94,10 +94,12 @@ Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferece
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/28003044-4308-487b-bc97-7d96d1e66834)
 
 <h2>Diagrama de Atividade(Funcionario):</h2>
+
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/8437ecc8-5eb4-4ec4-9eb6-62040ffc8469)
 
 
 <h2>Diagrama de Atividade(Adiministrador):</h2> 
+
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/d4eeec6c-537d-48c0-8f6e-c556be76806f)
 
 

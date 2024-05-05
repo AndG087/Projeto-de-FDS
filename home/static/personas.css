@@ -1,38 +1,3 @@
-.nome {
-  padding-left: 400px;
-  padding-top: 130px;
-}
-
-.projetos {
-  padding-left: 440px;
-  padding-top: 10px;
-}
-
-
-.descricao {
-  padding-left: 10px;
-  padding-top: 90px;
-}
-
-.form1 {
-  padding-left: 10px;
-  padding-top: 0px;
-}
-
-.form2 {
-  padding-left: 10px;
-  padding-top: 0px;
-}   
-
-.form3 {
-  padding-left: 425px;
-  padding-top: 0px;
-}
-
-.button{
-  background-color: cornflowerblue;
-}
-
 /* Reset de margens e paddings */
 * {
   margin: 0;

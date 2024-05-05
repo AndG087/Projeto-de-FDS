@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as logind
 from django.http import HttpResponse
 from .models import Avaliacao3, Projeto, Foto, Descricao
+from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 
 
@@ -85,28 +86,37 @@ def avaliacaogeral(request):
 
 
 
-def home(request):
-    if request.method == "GET":
-        # Filtrar os projetos onde o usuário atual está listado como participante
+def home(request, user_id=None):
+    if user_id:
+        # Recupere o usuário com base no ID fornecido ou retorne um erro 404 se não encontrado
+        user = get_object_or_404(User, pk=user_id)
+        
+        # Agora você pode filtrar os projetos, fotos, descrições e avaliações do usuário específico
+        trabalhos = Projeto.objects.filter(participants__icontains=user.username)
+        foto = Foto.objects.filter(usuario_id=user.id).order_by('-id').first()
+        descricao = Descricao.objects.filter(usuario_id=user.id).order_by('-id').first()
+        avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=user.username)
+        media_avaliacoes = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
+        media_avaliacoes = round(media_avaliacoes, 1) if media_avaliacoes is not None else None
+    else:
+        # Se nenhum ID de usuário fornecido, carregue o perfil do usuário logado
+        user = request.user
         trabalhos = Projeto.objects.filter(participants__icontains=request.user.username)
         foto = Foto.objects.filter(usuario_id=request.user.id).order_by('-id').first()
-            
         descricao = Descricao.objects.filter(usuario_id=request.user.id).order_by('-id').first()
-        
-        # Calcular a média das avaliações recebidas pelo usuário logado
         avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=request.user.username)
         media_avaliacoes = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
         media_avaliacoes = round(media_avaliacoes, 1) if media_avaliacoes is not None else None
         
-        contexto = {
-            'trabalhos': trabalhos,
-            'foto': foto,
-            'descricao': descricao,
-            'user': request.user,
-            'media_avaliacoes': media_avaliacoes,
-        }
-        
-        return render(request, "personuser.html", contexto)
+    contexto = {
+        'trabalhos': trabalhos,
+        'foto': foto,
+        'descricao': descricao,
+        'user': user,
+        'media_avaliacoes': media_avaliacoes,
+    }
+    
+    return render(request, "personuser.html", contexto)
     
 
 def editar_perfil(request):

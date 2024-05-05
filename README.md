@@ -1,41 +1,41 @@
+<div align= "center">
+
 <h1>Olá somos o Eye_Of_Job<img src="https://media.discordapp.net/attachments/1226257874188238948/1236467743839227914/logo-branco.png?ex=66381dd2&is=6636cc52&hm=4fcad590a6ae90b1c329126c2f55b29d84502ceab9a3d4d5da9793c697b4c3d2&=&format=webp&quality=lossless&width=498&height=498" width="55px" /><h1/> 
 
+</div>
+
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/128396955/cbbb265b-ee3b-4368-9d8a-891f634747bf)
 
 
-
-Imagem do Painel da sprint:
+<details>
+<summary><h2> 👀 1- Entrega</h2></summary>
+<ul>
+### Imagem do Painel da sprint:
 
 ![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/bc6886ab-20ae-4845-93aa-b994532d6dd6)
 ![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/3027a2ba-ac55-412d-b1bd-118402048b0d)
 
 
 
-Imagem do Backlog:
+### Imagem do Backlog:
 
 ![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/33f7fcec-2a11-44f1-98b4-619a2beaf065)
 
 
-Link para o prototipo de Lo-fi:
-(https://www.figma.com/proto/SrLadAJxEpLGuKsHno4niq/Eye-of-job-Lo-fi?type=design&node-id=14-26&t=bsnGAWvmnlMsRVlU-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=14%3A26&mode=design)
+### Link para o prototipo de Lo-fi:
+ + (https://www.figma.com/proto/SrLadAJxEpLGuKsHno4niq/Eye-of-job-Lo-fi?type=design&node-id=14-26&t=bsnGAWvmnlMsRVlU-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=14%3A26&mode=design)
 
-Link para o ScreenCast(Lo-fi):
-(https://youtu.be/wk1WEvwAZXU)
+### Link para o ScreenCast(Lo-fi):
++ (https://youtu.be/wk1WEvwAZXU)
 
-
-<details>
-<summary><h2>1- Entrega</h2></summary>
-<ul>
-    <li><a href="https://www.youtube.com/watch?v=0sU1ZieJ0rc">Screencast</a></li>
-    <h3>Quadro do Jira:</h3>
-    <img src="prints/Backlog_Primeira-Entrega.jpeg"/>
-    <img src="prints/Quadro_Primeira_Entrega.png"/>
 </ul>
 </details>
 <details>
-<summary><h2>2- Entrega</h2></summary>
+<summary><h2> 🕶️ 2- Entrega</h2></summary>
 <ul>
     Diagrama de atividade:
 ![diagrama_ativo drawio](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/04ff9aa9-d87e-4982-be7a-66fdf5aa2076)
+
 Link do diagrama para melhor vizualização:
 https://drive.google.com/file/d/1U_2xaCYBRfLcilhWr1-Cr5JwiEZ48Ob9/view?usp=sharing
 
@@ -50,21 +50,21 @@ Link do screencast(Site): (https://youtu.be/EVDKA4HIgY0)
 Feedbacks do pair programming:
 
 
-  Anderson Gomes e Breno Lira:
-          Realizamos o pair programming com o objetivo de estabelecermos a história de avaliação geral dos funcionários com parâmetro de 5 estrelas.
+  <h2>Anderson Gomes e Breno Lira: </h2>
+          <p>Realizamos o pair programming com o objetivo de estabelecermos a história de avaliação geral dos funcionários com parâmetro de 5 estrelas.
           Resultado: A implementação foi concluída com sucesso, além disso já existem tratamentos para erros encontrados em nossa pesquisa com finalidade de concluir o bug tracker/issues, a todo momento quando um dos dois estivesse realizando a parte prática, o outro estava lá para contribuir com o pensamento.
-       Conclusão: O pair programming foi um sucesso e poodemos reproduzir as nossas experiencias com um ditado do tio Ben, sim ele mesmo, "Com grandes poderes, vêm grandes responsabilidades" 
+       Conclusão: O pair programming foi um sucesso e poodemos reproduzir as nossas experiencias com um ditado do tio Ben, sim ele mesmo, "Com grandes poderes, vêm grandes responsabilidades"</p>
 
 
-  Felipe e Arthur:
-          Realizamos pair programming para implementar um novo recurso de criação de novos projetos para a empresa.
-          Resultado: Acredito que o pair programming teve sucesso pois além de implementarmos nossa história de maneira correta com as experiência de cada lado foi possível realizar essa função de forma mais dinâmica. Enquanto Arthur tinha conhecimento vasto sobre a parte de banco de dados Felipe realizou a parte do html. Independente de qual participante estivesse realizando a parte prático o outro estava presente para ajuda no raciocínio.
+  <h2>Felipe e Arthur: </h2>
+          <p>Realizamos pair programming para implementar um novo recurso de criação de novos projetos para a empresa.
+          Resultado: Acredito que o pair programming teve sucesso pois além de implementarmos nossa história de maneira correta com as experiência de cada lado foi possível realizar essa função de forma mais dinâmica. Enquanto Arthur tinha conhecimento vasto sobre a parte de banco de dados Felipe realizou a parte do html. Independente de qual participante estivesse realizando a parte prático o outro estava presente para ajuda no raciocínio.</p>
 
-  Lucas de Holanda e Vinicius Freitas:
-          Realizamos o pair programming para implementar a história de personalização do usuário;
-          Resultado: acho que o pair programming serviu de aproximação e fortalecimento para o grupo e para as duplas, acredito que fizemos um bom trabalho em dupla, nos esforçamos para fazermos o nosso melhor e nos fizemos presente nas reuniões. Nossas maiores dificuldades encontradas foram no html e css, às vezes alguns erros relacionados ao banco de dados apareciam e dificultavam ainda mais a execução do html, achamos melhor deixarmos essa parte mais simples, porém eficaz.
+  <h2>Lucas de Holanda e Vinicius Freitas: </h2>
+          <p>Realizamos o pair programming para implementar a história de personalização do usuário;
+          Resultado: acho que o pair programming serviu de aproximação e fortalecimento para o grupo e para as duplas, acredito que fizemos um bom trabalho em dupla, nos esforçamos para fazermos o nosso melhor e nos fizemos presente nas reuniões. Nossas maiores dificuldades encontradas foram no html e css, às vezes alguns erros relacionados ao banco de dados apareciam e dificultavam ainda mais a execução do html, achamos melhor deixarmos essa parte mais simples, porém eficaz.</p>
 
-Instruções de Acesso ao Site:
+<h2>Instruções de Acesso ao Site: </h2>
 
 Abra seu navegador da web preferido e vá para o site do Eye of Job. Você pode fazer isso digitando "https://eye-of-job.azurewebsites.net/" na barra de endereços do navegador e pressionando Enter.
 
@@ -82,7 +82,7 @@ Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferece
 </ul>
 </details>
 <details>
-<summary><h2>3- Entrega</h2></summary>
+<summary><h2> 👓 3- Entrega</h2></summary>
 <ul>
     Imagem do Painel da sprint e do Backlog:
 
@@ -98,3 +98,6 @@ Diagrama de Atividade(Adiministrador): ![image](https://github.com/AndG087/Proje
 
 </ul>
 </details>
+
+<h1> Participantes👪</h1>
+

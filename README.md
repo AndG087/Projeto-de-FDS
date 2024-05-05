@@ -10,22 +10,22 @@
 <details>
 <summary><h2> 👀 1- Entrega</h2></summary>
 <ul>
-### Imagem do Painel da sprint:
+<h2>Imagem do Painel da sprint:</h2>
 
 ![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/bc6886ab-20ae-4845-93aa-b994532d6dd6)
 ![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/3027a2ba-ac55-412d-b1bd-118402048b0d)
 
 
 
-### Imagem do Backlog:
+<h2> Imagem do Backlog: </h2>
 
 ![image](https://github.com/Breno-Lira/Projeto-de-FDS/assets/150074307/33f7fcec-2a11-44f1-98b4-619a2beaf065)
 
 
-### Link para o prototipo de Lo-fi:
+<h2> Link para o prototipo de Lo-fi: </h2>
  + (https://www.figma.com/proto/SrLadAJxEpLGuKsHno4niq/Eye-of-job-Lo-fi?type=design&node-id=14-26&t=bsnGAWvmnlMsRVlU-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=14%3A26&mode=design)
 
-### Link para o ScreenCast(Lo-fi):
+<h2> Link para o ScreenCast(Lo-fi): </h2>
 + (https://youtu.be/wk1WEvwAZXU)
 
 </ul>
@@ -33,13 +33,15 @@
 <details>
 <summary><h2> 🕶️ 2- Entrega</h2></summary>
 <ul>
-    Diagrama de atividade:
-![diagrama_ativo drawio](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/04ff9aa9-d87e-4982-be7a-66fdf5aa2076)
+<h2>Diagrama de atividade: </h2>
 
-Link do diagrama para melhor vizualização:
+ ![image](https://github.com/AndG087/Projeto-de-FDS/assets/128396955/e31014b8-d4d8-427e-978e-076a6b2647f5)
+
+
+<h2>Link do diagrama para melhor vizualização: </h2>
 https://drive.google.com/file/d/1U_2xaCYBRfLcilhWr1-Cr5JwiEZ48Ob9/view?usp=sharing
 
-Quadro da Sprint 01 e backlog do jira:
+<h2>Quadro da Sprint 01 e backlog do jira:</h2>
 
 ![Captura de tela 2024-04-07 181042](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/f7d2ccc9-037b-4793-a0dc-b13d17e72de7)
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/deeb68b4-b6eb-4dee-a441-afc62f5e5a7f)

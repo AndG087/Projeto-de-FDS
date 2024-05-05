@@ -118,7 +118,7 @@ def home(request, user_id=None):
     
     return render(request, "personuser.html", contexto)
     
-#testescreencast1
+#testescreencast2
 def editar_perfil(request):
     if request.method == "GET":
         return render(request, "editar_perfil.html")

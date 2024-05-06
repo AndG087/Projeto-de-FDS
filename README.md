@@ -116,6 +116,8 @@ Resultado: Acreditamos que o uso do pair programming aumentou o nosso conhecimen
 <h3>Breno Lira e Felipe Nunes</h3>
  <p>Realizamos o pair progamming para implementar a história de Ranking de usuários, onde seria possível visualizar o ranking dos funcionários da empresa, se baseando na nota média gerada das avaliações recebidas por cada usuário; Resultado: O uso do pair programming, novamente, foi muito útil e nos ajudou a trabalhar de forma mais eficiente. Não encontramos muitos desafios para a implementação dessa história, houveram algumas dificuldades ao tentar colocar alguns elementos nos Rankings, mas nada que atrasou muito o andamento do nosso trabalho. Trabalhar utilizando o pair programming  pode ajudar muito, a divisão de atividades, e a disposição para ajudar a sua dupla auxilia muito para um fluxo de trabalho mais fluido e organizado.</p>
 </ul>
+
+Link do nosso site: "https://eye-of-job.azurewebsites.net/"
 </details>
 
 <h1> Participantes👪</h1>

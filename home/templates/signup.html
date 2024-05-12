@@ -12,9 +12,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.0.2/tailwind.min.css"
     />
-    <link rel="stylesheet" href="{% static 'login.css' %}" />
+    <link rel="stylesheet" href="{% static 'login2.css' %}" />
   </head>
   <body>
+
+
+    <h1 id = "nome_logo">EYE OF JOB</h1>
+
+    <div class = "form_login">
     <form action="{% url 'signup' %}" method="POST">{% csrf_token%}
       <h1>Cadastro</h1>
       <div class="form-group">
@@ -26,6 +31,9 @@
         <input type="password" name="senha" required placeholder="Password" autocomplete="off" />
         <button type="submit" class="submitbtn">Cadastrar</button> 
       </div>
+      <p>Já possui uma conta? <a href="{% url 'login' %}">Login</a></p>
     </form>
+  </div>
+
   </body>
 </html>

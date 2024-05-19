@@ -185,9 +185,13 @@
                             </div>
                             
                             <div class="modal-body">
+                                {% if feedbacks %}
                                 {% for feedback in feedbacks %}
                                 <p>[{{feedback.created_at}}] : {{ feedback.texto }}</p>
                                 {% endfor %}
+                                {% else %}
+                                <p> Você não enviou nenhum feeedback<p>
+                                {% endif %}
                             </div>
                             
                             <div class="modal-footer">

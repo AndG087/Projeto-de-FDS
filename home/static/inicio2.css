@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+  padding: 10px;
+}
+
+a {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+}
+
+.about-us {
+  text-align: center;
+  display: inline-flex;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.linha-de-separacao {
+  border-top: 1px solid white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin: 20px 0;
+}
+
+.btn-custom {
+  padding: 10px 20px; /* Aumenta o tamanho do botão */
+  border-radius: 10px; /* Arredonda as bordas */
+  background-color: #0099ff; /* Define a cor de fundo azul claro */
+  border: none; /* Remove a borda padrão */
+  color: white; /* Define a cor do texto */
+  font-size: 16px; /* Aumenta o tamanho da fonte */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo */
+}
+
+.btn-custom:hover {
+  background-color: #0089c0; /* Muda a cor de fundo ao passar o mouse */
+}

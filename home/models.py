@@ -32,3 +32,13 @@ class Descricao(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     def str(self) -> str:
         return self.nome
+    
+
+class Feedback3(models.Model):
+    email = models.CharField(max_length=150)
+    texto = models.CharField(max_length=500)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateField(auto_now_add=True)  # Apenas data de criação
+
+    def __str__(self):
+        return f"Feedback by {self.user.username} on {self.created_at}"

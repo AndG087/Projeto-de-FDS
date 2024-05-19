@@ -8,7 +8,7 @@ from django.db.models import Count, Avg
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as logind
 from django.http import HttpResponse
-from .models import Avaliacao3, Projeto, Foto, Descricao
+from .models import Avaliacao3, Projeto, Foto, Descricao, Feedback3
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 
@@ -17,7 +17,16 @@ from django.http import JsonResponse
 
 @login_required(login_url="/login/")
 def inicio(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        texto = request.POST.get('texto')
+        usuario = request.user
+        
+        feedback = Feedback3(email=email, texto=texto,user=usuario)
+        feedback.save()
+        
     return render(request,'inicio.html')
+
 
 
 def login(request):
@@ -107,6 +116,7 @@ def home(request, user_id=None):
         avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=request.user.username)
         media_avaliacoes = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
         media_avaliacoes = round(media_avaliacoes, 1) if media_avaliacoes is not None else None
+        feedbacks = Feedback3.objects.filter(user=user)
         
     contexto = {
         'trabalhos': trabalhos,
@@ -114,6 +124,7 @@ def home(request, user_id=None):
         'descricao': descricao,
         'user': user,
         'media_avaliacoes': media_avaliacoes,
+        'feedbacks': feedbacks,
     }
     
     return render(request, "personuser.html", contexto)
@@ -205,7 +216,7 @@ def ranking(request):
 
     # Passando os usuários e suas informações para o template
     return render(request, 'ranking.html', {'usuarios': usuarios})
-    
+      
 def pesquisa_resultado(request, user_id=None):
     if user_id:
         # Recupere o usuário com base no ID fornecido ou retorne um erro 404 se não encontrado

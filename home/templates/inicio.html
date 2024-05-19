@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
-    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'inicio2.css' %}">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
                 <li><a href="{% url 'ranking' %}">Ranking</a></li>
                 <li><a href="{% url 'search' %}">Pesquisa</a></li>
 
-                <!-- Adicione mais links de navegação conforme necessário -->
+               
             </ul>
         </nav>
     </div>
@@ -47,8 +47,26 @@
    
 </main>
 
+<br><br><br><br>
+
+
 <footer>
     <div class="container">
+        <p>Algum problema? Nos informe:</p> <br>
+        <form method = 'POST'>
+            {%csrf_token%}
+
+            <label for = "email">E-mail:</label> <br>
+            <input type = "Email" name = "email" placeholder = "Seu E-mail..." required> 
+            <br>
+            <br>
+            <label for = "texto">Feedback:</label> <br>
+            <textarea rows="4" name = "texto" placeholder = "Digite aqui" required></textarea>
+            <br>
+            <br>
+            <button type="submit" class="btn-custom">Enviar</button>
+
+        </form>
         <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
     </div>
 </footer>

@@ -248,3 +248,7 @@ def pesquisa_resultado(request, user_id=None):
     }
     
     return render(request, "pesquisaresultado.html", contexto)
+
+
+def tipousuario(request):
+    return render(request,'tipousuario.html')

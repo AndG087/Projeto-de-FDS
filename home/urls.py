@@ -15,4 +15,7 @@ urlpatterns = [
     path('perfil/', views.home, name="perfil"),  # Rota para o perfil do usuário logado
     path('perfil/<int:user_id>/', views.home, name="perfil_usuario"),  # Rota para o perfil de um usuário específico
     path('usertype/', views.tipousuario, name="tipousuario"),
+    path('anotações/', views.anotacao, name="anotar"),
+    path('anotacoes/delete/<int:id>/', views.deletar_anotacao, name='deletar_anotacao'),
+    path('anotacoes/edit/<int:id>/', views.editar_anotacao, name='editar_anotacao'),
 ]

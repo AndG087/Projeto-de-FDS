@@ -8,7 +8,7 @@ from django.db.models import Count, Avg
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as logind
 from django.http import HttpResponse
-from .models import Avaliacao3, Projeto, Foto, Descricao, Feedback3
+from .models import Avaliacao3, Projeto, Foto, Descricao, Feedback3, Anotações
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 
@@ -252,3 +252,73 @@ def pesquisa_resultado(request, user_id=None):
 
 def tipousuario(request):
     return render(request,'tipousuario.html')
+
+def anotacao(request):
+    if request.method == "GET":
+        user = request.user
+        anotacao = Anotações.objects.filter(usuario = user)
+        foto = Foto.objects.filter(usuario_id=request.user.id).order_by('-id').first()
+        contexto = {
+        'anotacao': anotacao,
+        'foto': foto,
+        }
+        
+        return render(request, "anotacao.html",contexto)
+    
+    elif request.method == "POST":
+        titulo = request.POST.get("titulo")
+        anotacao = request.POST.get("anotacao")
+        usuario = request.user
+        
+        anota = Anotações(titulo=titulo,anotar=anotacao,usuario=usuario)
+        anota.save()
+        
+        anot = Anotações.objects.filter(usuario = usuario)
+        foto = Foto.objects.filter(usuario_id=request.user.id).order_by('-id').first()
+        
+        contexto = {
+        'anotacao': anot,
+        'foto': foto,
+    }
+      
+        return render(request, "anotacao.html",contexto)
+    
+def deletar_anotacao(request, id):
+    anotacao = get_object_or_404(Anotações, id=id, usuario=request.user)
+    anotacao.delete()
+    anot = Anotações.objects.filter(usuario = request.user)
+    foto = Foto.objects.filter(usuario_id=request.user.id).order_by('-id').first()
+        
+    contexto = {
+        'anotacao': anot,
+        'foto': foto,
+    }
+      
+    return render(request, "anotacao.html",contexto)
+    
+
+def editar_anotacao(request, id):
+    anotacao = get_object_or_404(Anotações, id=id, usuario=request.user)
+    if request.method == "GET":
+        anot = Anotações.objects.filter(usuario = request.user)
+        foto = Foto.objects.filter(usuario_id=request.user.id).order_by('-id').first()
+        contexto = {
+        'anotacao': anot,
+        'foto': foto,
+        'u_id':id,
+        }
+        
+        return render(request, "editar_anotacao.html",contexto)
+    elif request.method == "POST":
+        anotacao.anotar = request.POST.get("anotacao")
+        anotacao.save()
+        anot = Anotações.objects.filter(usuario = request.user)
+        foto = Foto.objects.filter(usuario_id=request.user.id).order_by('-id').first()
+        
+        contexto = {
+            'anotacao': anot,
+            'foto': foto,
+            'u_id':id,
+        }
+      
+        return render(request, "anotacao.html",contexto)

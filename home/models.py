@@ -42,3 +42,10 @@ class Feedback3(models.Model):
 
     def __str__(self):
         return f"Feedback by {self.user.username} on {self.created_at}"
+    
+class Anotações(models.Model):
+    titulo = models.CharField(max_length=200)
+    anotar = models.TextField()
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    def str(self) -> str:
+        return self.nome

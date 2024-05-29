@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Input Validation</title>
+    <title>Escolha de Entrada</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
@@ -12,29 +12,28 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.0.2/tailwind.min.css"
     />
-    <link rel="stylesheet" href="{% static 'login2.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertype.css' %}" />
   </head>
-  <body>
-
-    
-    <h1 id = "nome_logo">EYE OF JOB</h1>
-    <h1 id = "nome_logo">Como você deseja entrar: </h1>
-   
-    <div class = "form_login">
-    <form action="{% url 'login' %}" method="POST">{% csrf_token%}
-      <h1>Login</h1>
-      <div class="form-group">
-        <label for="email">Nome</label>
-        <input type="text" id="nome" name="nome" spellcheck=false required placeholder="nome" autocomplete="off" />
-        <label for="email">Senha</label>
-        <input type="password" name="senha" required placeholder="Password" autocomplete="off" />
-        <button type="submit" class="submitbtn">Logar</button> 
-      </div> 
-        <p>Você não possui cadastro? <a href="{% url 'signup' %}">Cadastrar-se</a></p>
+  <body class="text-white">
+    <div class="flex flex-col items-center justify-center min-h-screen">
+      <h1 id="nome_logo" class="text-4xl font-bold mb-8">EYE OF JOB</h1>
+      <h2 class="text-2xl mb-6">Como você deseja entrar:</h2>
+      
+      <div class="grid grid-cols-2 gap-8">
+        <a href="{% url 'login' %}" class="bg-gray-800 text-white p-10 rounded-lg shadow-lg hover:bg-gray-700 text-center no-underline">
+          Login Usuário
+        </a>
+        <a href="{% url 'signup' %}" class="bg-gray-800 text-white p-10 rounded-lg shadow-lg hover:bg-gray-700 text-center no-underline">
+          Cadastro Usuário
+        </a>
+        <a  class="bg-gray-800 text-white p-10 rounded-lg shadow-lg hover:bg-gray-700 text-center no-underline">
+          Login Admin/Empresa
+        </a>
+        <a  class="bg-gray-800 text-white p-10 rounded-lg shadow-lg hover:bg-gray-700 text-center no-underline">
+          Cadastro Admin/Empresa
+        </a>
       </div>
-    </form>
-  </div>
-
-
+    </div>
   </body>
 </html>
+

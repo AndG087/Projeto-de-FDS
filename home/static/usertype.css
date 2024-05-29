@@ -1,0 +1,44 @@
+:root {
+    --valid: hsl(140 80% 40%);
+    --invalid: hsl(10 80% 40%);
+    --input: hsl(0 0% 0%);
+  }
+
+  body{
+    font-weight: 100;
+    background-color: hsl(0 0% 6%);
+    color: hsl(0 0% 98%);
+  }
+  
+  h1 {
+    font-weight: 400;
+    padding-top: 2%;
+    color: #a9a9a9;
+  }
+  
+  h2 {
+    color: #a9a9a9;
+  }
+  
+  .grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .grid a:hover {
+    background: #404949;
+  }
+  
+  #nome_logo {
+    font-weight: 400;
+  }
+  
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px; /* Espessura do sublinhado */
+  }
+ 
+

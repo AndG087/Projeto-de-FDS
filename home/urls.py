@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.tipousuario, name="usertype"),
     path('login/', views.login, name="login"),
     path('signup/', views.signup, name="signup"),
+    path('signupadmin/', views.create_superuser, name="signupadmin"),
     path('home/', views.inicio, name="inicio"),
     path('avaliacaogeral/', views.avaliacaogeral, name="avaliacaogeral"),
     path('personuser/', views.home, name="personuser"),

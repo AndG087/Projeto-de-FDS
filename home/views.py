@@ -11,7 +11,7 @@ from django.http import HttpResponse
 from .models import Avaliacao3, Projeto, Foto, Descricao, Feedback3, Anotações
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
-
+from django.contrib import messages
 
 
 
@@ -322,3 +322,29 @@ def editar_anotacao(request, id):
         }
       
         return render(request, "anotacao.html",contexto)
+    
+
+
+def create_superuser(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+
+
+        if User.objects.filter(username=username).exists():
+                messages.error(request, 'O nome de usuário já existe.')
+        elif User.objects.filter(email=email).exists():
+                messages.error(request, 'O e-mail já está em uso.')
+        else:
+            user = User.objects.create_user(
+                    username=username,
+                    email=email,
+                    password=password
+                )
+            user.is_superuser = True
+            user.is_staff = True
+            user.save()
+            messages.success(request, 'Superusuário criado com sucesso.')
+            return redirect('login')  # Redirecione para uma página adequada
+    return render(request, 'createadmin.html')

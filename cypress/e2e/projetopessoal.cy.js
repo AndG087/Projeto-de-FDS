@@ -8,7 +8,7 @@ describe('test projetos pessoais', () => {
         cy.exec('python manage.py migrate')
         cy.deleteAllUsers();
         
-        cy.get('a').click()
+        cy.get('[href="/signup/"]').click()
         cy.wait(1500)
         cy.get('#nome').type("User 1")
         cy.wait(1500)

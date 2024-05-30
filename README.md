@@ -123,7 +123,10 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
 <details>
 <summary><h2>😎 Entrega 4: </h2></summary>
  <ul>
-  
+  <h2>Feedbacks do Pair Programming:</h2>
+  <h3>Lucas de Holanda e Breno Lira:</h3>
+  <p>Realizamos o pair-programming para implementar a história Feedback, que consiste em: o usuário poderia enviar uma mensagem sobre o que está achando do nosso sistema para nós (desenvolvedores);
+Resultado: Acreditamos que o processo foi bem sucedido, já que a história foi implementada com sucesso e sem muitas dificuldades, a experiência anterior nas outras histórias ajudou bastante na execução dessa. De certo modo, foi uma história simples, porém de bastante utilidade para o avançar do projeto e seu melhoramento.</p>
  </ul>
 </details>
 

@@ -1,6 +1,6 @@
 <div align= "center">
 
-<h1>Olá somos o Eye_Of_Job<img src="https://media.discordapp.net/attachments/1226257874188238948/1236467743839227914/logo-branco.png?ex=66381dd2&is=6636cc52&hm=4fcad590a6ae90b1c329126c2f55b29d84502ceab9a3d4d5da9793c697b4c3d2&=&format=webp&quality=lossless&width=498&height=498" width="55px" /><h1/> 
+<h1>Olá somos o Eye_Of_Job <img src="https://media.discordapp.net/attachments/1226257874188238948/1236467743839227914/logo-branco.png?ex=66381dd2&is=6636cc52&hm=4fcad590a6ae90b1c329126c2f55b29d84502ceab9a3d4d5da9793c697b4c3d2&=&format=webp&quality=lossless&width=498&height=498" width="55"><h1/> 
 
 </div>
 
@@ -8,7 +8,7 @@
 
 
 <details>
-<summary><h2> 👀 1- Entrega</h2></summary>
+<summary><h2>👀 Entrega 1:</h2></summary>
 <ul>
 <h2>Imagem do Painel da sprint:</h2>
 
@@ -31,7 +31,7 @@
 </ul>
 </details>
 <details>
-<summary><h2> 🕶️ 2- Entrega</h2></summary>
+<summary><h2>👓 Entrega 2: </h2></summary>
 <ul>
 <h2>Diagrama de atividade: </h2>
 
@@ -84,7 +84,7 @@ Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferece
 </ul>
 </details>
 <details>
-<summary><h2> 👓 3- Entrega</h2></summary>
+<summary><h2>🕶️ Entrega 3: </h2></summary>
 <ul>
     <h2>Imagem do Painel da sprint e do Backlog:</h2>
 
@@ -118,6 +118,13 @@ Resultado: Acreditamos que o uso do pair programming aumentou o nosso conhecimen
 </ul>
 
 Link do nosso site: "https://eye-of-job.azurewebsites.net/"
+</details>
+
+<details>
+<summary><h2>😎 Entrega 4: </h2></summary>
+ <ul>
+  
+ </ul>
 </details>
 
 <h1> Participantes👪</h1>

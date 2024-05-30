@@ -1,6 +1,6 @@
 <div align= "center">
 
-<h1>Olá somos o Eye_Of_Job <img src="https://media.discordapp.net/attachments/1226257874188238948/1236467743839227914/logo-branco.png?ex=66381dd2&is=6636cc52&hm=4fcad590a6ae90b1c329126c2f55b29d84502ceab9a3d4d5da9793c697b4c3d2&=&format=webp&quality=lossless&width=498&height=498" width="55"><h1/> 
+<h1>Olá somos o Eye_Of_Job <img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9eabc090-a0cd-4eea-be66-61b65dcc64c4" width="55"><h1/> 
 
 </div>
 

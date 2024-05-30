@@ -17,7 +17,41 @@ from django.contrib import messages
 
 @login_required(login_url="/login/")
 def inicio(request):
-    if request.method == 'POST':
+    if request.method == 'GET':
+        
+        usuarios = User.objects.all()
+        total_media_avaliacoes = 0
+        total_usuarios = usuarios.count()
+
+    
+        for usuario in usuarios:
+            avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=usuario.username)
+            usuario.num_avaliacoes = avaliacoes_usuario.count()  
+            media = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
+            usuario.avg_nota = round(media, 1) if media is not None else None
+        
+            if media is not None:
+                total_media_avaliacoes += media
+
+    
+        if total_usuarios > 0:
+            media_geral_avaliacoes = total_media_avaliacoes / total_usuarios
+        else:
+            media_geral_avaliacoes = 0
+
+ 
+        usuarios = sorted(usuarios, key=lambda x: x.avg_nota if x.avg_nota is not None else float('-inf'), reverse=True)
+
+    
+        contexto = {
+            'usuarios': usuarios,
+            'media_geral_avaliacoes': round(media_geral_avaliacoes, 1) if total_usuarios > 0 else None,
+        }
+    
+        return render(request, 'inicio.html', contexto)
+
+    
+    elif request.method == 'POST':
         email = request.POST.get('email')
         texto = request.POST.get('texto')
         usuario = request.user
@@ -25,7 +59,36 @@ def inicio(request):
         feedback = Feedback3(email=email, texto=texto,user=usuario)
         feedback.save()
         
-    return render(request,'inicio.html')
+        usuarios = User.objects.all()
+        total_media_avaliacoes = 0
+        total_usuarios = usuarios.count()
+
+    
+        for usuario in usuarios:
+            avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=usuario.username)
+            usuario.num_avaliacoes = avaliacoes_usuario.count()  
+            media = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
+            usuario.avg_nota = round(media, 1) if media is not None else None
+        
+            if media is not None:
+                total_media_avaliacoes += media
+
+    
+        if total_usuarios > 0:
+            media_geral_avaliacoes = total_media_avaliacoes / total_usuarios
+        else:
+            media_geral_avaliacoes = 0
+
+ 
+        usuarios = sorted(usuarios, key=lambda x: x.avg_nota if x.avg_nota is not None else float('-inf'), reverse=True)
+
+    
+        contexto = {
+            'usuarios': usuarios,
+            'media_geral_avaliacoes': round(media_geral_avaliacoes, 1) if total_usuarios > 0 else None,
+        }
+    
+        return render(request, 'inicio.html', contexto)
 
 
 

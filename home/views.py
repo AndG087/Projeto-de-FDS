@@ -12,7 +12,7 @@ from .models import Avaliacao3, Projeto, Foto, Descricao, Feedback3, Anotações
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from django.contrib import messages
-
+import datetime
 
 
 @login_required(login_url="/login/")
@@ -22,7 +22,6 @@ def inicio(request):
         usuarios = User.objects.all()
         total_media_avaliacoes = 0
         total_usuarios = usuarios.count()
-
     
         for usuario in usuarios:
             avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=usuario.username)
@@ -32,37 +31,36 @@ def inicio(request):
         
             if media is not None:
                 total_media_avaliacoes += media
-
     
         if total_usuarios > 0:
             media_geral_avaliacoes = total_media_avaliacoes / total_usuarios
         else:
             media_geral_avaliacoes = 0
 
- 
         usuarios = sorted(usuarios, key=lambda x: x.avg_nota if x.avg_nota is not None else float('-inf'), reverse=True)
-
+        
+        # Buscar projetos e ordená-los por data de término
+        projetos = Projeto.objects.all().order_by('end_date')
     
         contexto = {
             'usuarios': usuarios,
             'media_geral_avaliacoes': round(media_geral_avaliacoes, 1) if total_usuarios > 0 else None,
+            'projetos': projetos,  # Adiciona projetos ao contexto
         }
     
         return render(request, 'inicio.html', contexto)
 
-    
     elif request.method == 'POST':
         email = request.POST.get('email')
         texto = request.POST.get('texto')
         usuario = request.user
         
-        feedback = Feedback3(email=email, texto=texto,user=usuario)
+        feedback = Feedback3(email=email, texto=texto, user=usuario)
         feedback.save()
         
         usuarios = User.objects.all()
         total_media_avaliacoes = 0
         total_usuarios = usuarios.count()
-
     
         for usuario in usuarios:
             avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=usuario.username)
@@ -72,24 +70,24 @@ def inicio(request):
         
             if media is not None:
                 total_media_avaliacoes += media
-
     
         if total_usuarios > 0:
             media_geral_avaliacoes = total_media_avaliacoes / total_usuarios
         else:
             media_geral_avaliacoes = 0
 
- 
         usuarios = sorted(usuarios, key=lambda x: x.avg_nota if x.avg_nota is not None else float('-inf'), reverse=True)
-
+        
+        # Buscar projetos e ordená-los por data de término
+        projetos = Projeto.objects.all().order_by('end_date')
     
         contexto = {
             'usuarios': usuarios,
             'media_geral_avaliacoes': round(media_geral_avaliacoes, 1) if total_usuarios > 0 else None,
+            'projetos': projetos,  # Adiciona projetos ao contexto
         }
     
         return render(request, 'inicio.html', contexto)
-
 
 
 def login(request):
@@ -227,16 +225,37 @@ def editar_perfil(request):
 
 
     
+@login_required
 def new_project(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         description = request.POST.get('description')
         participants = request.POST.get('participants')
+        start_date = request.POST.get('start_date')
+        end_date = request.POST.get('end_date')
         usuario = request.user
-        
-        project = Projeto(name=name, description=description, participants=participants,usuario=usuario)
+
+        # Validar as datas no formato ISO (YYYY-MM-DD)
+        try:
+            start_date = datetime.date.fromisoformat(start_date)
+        except ValueError:
+            return JsonResponse({'success': False, 'error': 'Data de início inválida. Use o formato YYYY-MM-DD.'})
+
+        try:
+            end_date = datetime.date.fromisoformat(end_date)
+        except ValueError:
+            return JsonResponse({'success': False, 'error': 'Data de término inválida. Use o formato YYYY-MM-DD.'})
+
+        project = Projeto(
+            name=name,
+            description=description,
+            participants=participants,
+            start_date=start_date,
+            end_date=end_date,
+            usuario=usuario
+        )
         project.save()
-        return JsonResponse({'success': True}) # Retorna uma resposta JSON indicando sucesso
+        return JsonResponse({'success': True})
     else:
         return render(request, 'projetos.html')
 

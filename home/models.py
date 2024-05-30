@@ -13,13 +13,15 @@ class Avaliacao3(models.Model):
 
 
 class Projeto(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=255)
     description = models.TextField()
-    participants = models.CharField(max_length=200)
+    participants = models.CharField(max_length=255)
+    start_date = models.DateField(null=True, blank=True)  # Permite nulos e em branco
+    end_date = models.DateField(null=True, blank=True)    # Permite nulos e em branco
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    def _str_ (self) -> str:
-        return self.nome
+    def __str__(self):
+        return self.name
     
 class Foto(models.Model):
     arq = models.URLField()

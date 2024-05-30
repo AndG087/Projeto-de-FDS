@@ -65,7 +65,6 @@ nav ul li {
 }
 
 nav ul li a {
-  
   text-decoration: none;
 }
 
@@ -106,7 +105,7 @@ form {
 .btn-custom {
   padding: 10px 20px; /* Aumenta o tamanho do botão */
   border-radius: 10px; /* Arredonda as bordas */
-  background-color: #0099ff; /* Define a cor de fundo azul claro */
+  background-color: #0089c0; /* Define a cor de fundo azul claro */
   border: none; /* Remove a borda padrão */
   color: white; /* Define a cor do texto */
   font-size: 16px; /* Aumenta o tamanho da fonte */
@@ -116,4 +115,115 @@ form {
 
 .btn-custom:hover {
   background-color: #0089c0; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estilo para a seção de overview */
+.overview {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.rating {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilo para a média da empresa */
+.media-empresa-section {
+  margin-top: 20px;
+}
+
+.media-empresa-table {
+  margin: 0 auto;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.media-empresa-table th, .media-empresa-table td {
+  padding: 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.media-empresa-table th {
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+}
+
+.media-empresa-table td {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilo para a tabela do calendário (agenda de projetos) */
+.agenda {
+  margin-top: 20px;
+  background-color: #fff; /* Fundo branco */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 10px; /* Arredonda as bordas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  padding: 20px;
+}
+
+.agenda table {
+  width: 100%;
+  border-collapse: collapse; /* Remove espaços entre as células */
+  margin-top: 20px;
+}
+
+.agenda th, .agenda td {
+  padding: 15px;
+  border: 1px solid #ccc; /* Borda cinza clara */
+  text-align: left;
+}
+
+.agenda th {
+  background-color: #f2f2f2; /* Fundo cinza claro para o cabeçalho */
+}
+
+.agenda tr:nth-child(even) {
+  background-color: #f9f9f9; /* Fundo cinza claro para linhas pares */
+}
+
+.agenda tr:hover {
+  background-color: #f1f1f1; /* Fundo cinza claro ao passar o mouse */
+}
+
+/* Melhorando a aparência do cabeçalho da tabela */
+.agenda th {
+  background-color: #333;
+  color: white;
+}
+
+/* Ajustando a largura das colunas para uma melhor distribuição */
+.agenda th:nth-child(1), .agenda td:nth-child(1) {
+  width: 20%;
+}
+
+.agenda th:nth-child(2), .agenda td:nth-child(2) {
+  width: 40%;
+}
+
+.agenda th:nth-child(3), .agenda td:nth-child(3),
+.agenda th:nth-child(4), .agenda td:nth-child(4) {
+  width: 20%;
 }

@@ -9,7 +9,6 @@
 </head>
 <body>
 
-
 <header>
     <div class="container">
         <h1>EYE OF JOB</h1>
@@ -25,8 +24,6 @@
                 <li><a href="{% url 'projetos' %}">Projetos</a></li>
                 <li><a href="{% url 'ranking' %}">Ranking</a></li>
                 <li><a href="{% url 'search' %}">Pesquisa</a></li>
-
-               
             </ul>
         </nav>
     </div>
@@ -35,41 +32,82 @@
 <main>
     <br>
     <div>
-        <h1>Bem vindo ao eye of job<h1>
+        <h1>Bem-vindo ao Eye of Job</h1>
         <br>
-        <p>Média da empresa: {{ media_geral_avaliacoes }}</p>
-
     </div>
     <br><br><br>
+    
     <section class="about-us">
         <div class="container">
             <h2>Sobre Nós</h2>
-            <p>Olá somos o Eye-of-job um site de análise de desempenho profissional, 
-                a proposta do nossso site é desenvolver uma plataforma onde as empresas possam administrar o desempenho de seus funcionários. Aqui é possível administrar de prazos, avaliar individualmente cada funcionário, entre outros. 
-                Com esta plataforma fica muito mais fácil organizar uma empresa de maneira correta e avaliar de forma correta quem se empenha ou não pela empresa. </p>
+            <p>Olá, somos o Eye-of-job, um site de análise de desempenho profissional. 
+               A proposta do nosso site é desenvolver uma plataforma onde as empresas possam administrar o desempenho de seus funcionários. Aqui é possível administrar prazos, avaliar individualmente cada funcionário, entre outros. 
+               Com esta plataforma, fica muito mais fácil organizar uma empresa de maneira correta e avaliar de forma adequada quem se empenha ou não pela empresa.</p>
         </div>
-   
+    </section>
+    
+    <section class="media-empresa-section">
+        <div class="container">
+            <h2>Média da Empresa</h2>
+            <table class="media-empresa-table">
+                <thead>
+                    <tr>
+                        <th>Média</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ media_geral_avaliacoes }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <br><br><br>
+
+    <!-- Agenda de Projetos -->
+    <section class="agenda">
+        <div class="container">
+            <h2>Agenda de Projetos</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome do Projeto</th>
+                        <th>Descrição</th>
+                        <th>Data de Início</th>
+                        <th>Data de Término</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for projeto in projetos %}
+                    <tr>
+                        <td>{{ projeto.name }}</td>
+                        <td>{{ projeto.description }}</td>
+                        <td>{{ projeto.start_date }}</td>
+                        <td>{{ projeto.end_date }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <br><br><br>
 </main>
-
-<br><br><br><br>
-
 
 <footer>
     <div class="container">
         <p>Algum problema? Nos informe:</p> <br>
-        <form method = 'POST'>
-            {%csrf_token%}
-
-            <label for = "email">E-mail:</label> <br>
-            <input type = "Email" name = "email" placeholder = "Seu E-mail..." required> 
-            <br>
-            <br>
-            <label for = "texto">Feedback:</label> <br>
-            <textarea rows="4" name = "texto" placeholder = "Digite aqui" required></textarea>
-            <br>
-            <br>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="email">E-mail:</label> <br>
+            <input type="email" name="email" placeholder="Seu E-mail..." required> 
+            <br><br>
+            <label for="texto">Feedback:</label> <br>
+            <textarea rows="4" name="texto" placeholder="Digite aqui" required></textarea>
+            <br><br>
             <button type="submit" class="btn-custom">Enviar</button>
-
         </form>
         <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
     </div>

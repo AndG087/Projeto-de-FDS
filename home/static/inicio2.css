@@ -1,9 +1,11 @@
+/* Reset de margens e paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo geral */
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
@@ -16,33 +18,33 @@ body {
   flex-direction: column;
 }
 
+/* Container centralizado */
 .container {
   text-align: center;
   padding: 10px;
+  
 }
 
+/* Links estilizados */
 a {
   display: inline-block;
   padding: 10px;
   border: 1px solid black;
-  background-color: white;
+  background-color: #fff;
   text-decoration: none;
   color: black;
   border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.about-us {
-  text-align: center;
-  display: inline-flex;
-  border: 1px solid black;
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-  background-color: white;
+a:hover {
+  background-color:#0089c0 ;
   color: black;
-  border-radius: 30px;
-  padding: 20px;
-  margin: 20px auto;
 }
 
+
+
+/* Cabeçalho */
 header {
   background-color: #333;
   color: #fff;
@@ -53,6 +55,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
+/* Navegação */
 nav ul {
   list-style: none;
   padding: 0;
@@ -66,13 +69,21 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
+  color: #333;
 }
 
+nav ul li a:hover {
+  color: #ddd;
+}
+
+/* Conteúdo principal */
 main {
   flex: 1;
   padding: 20px;
+  text-align: center;
 }
 
+/* Seção com títulos */
 section h2 {
   margin-bottom: 10px;
 }
@@ -81,6 +92,7 @@ section p {
   margin-bottom: 20px;
 }
 
+/* Rodapé */
 footer {
   background-color: #333;
   color: #fff;
@@ -94,30 +106,23 @@ footer {
   margin-bottom: 20px;
 }
 
-h1 {
-  text-align: center;
-}
-
-form {
-  margin: 20px 0;
-}
-
+/* Estilo dos botões */
 .btn-custom {
-  padding: 10px 20px; /* Aumenta o tamanho do botão */
-  border-radius: 10px; /* Arredonda as bordas */
-  background-color: #0089c0; /* Define a cor de fundo azul claro */
-  border: none; /* Remove a borda padrão */
-  color: white; /* Define a cor do texto */
-  font-size: 16px; /* Aumenta o tamanho da fonte */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  transition: background-color 0.3s; /* Adiciona uma transição suave para a mudança de cor de fundo */
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #0089c0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .btn-custom:hover {
-  background-color: #0089c0; /* Muda a cor de fundo ao passar o mouse */
+  background-color: #0077a1;
 }
 
-/* Estilo para a seção de overview */
+/* Seção de overview */
 .overview {
   background-color: #fff;
   border-radius: 10px;
@@ -145,7 +150,7 @@ form {
   color: #333;
 }
 
-/* Estilo para a média da empresa */
+/* Seção Média da Empresa */
 .media-empresa-section {
   margin-top: 20px;
 }
@@ -174,47 +179,45 @@ form {
   color: #333;
 }
 
-/* Estilo para a tabela do calendário (agenda de projetos) */
+/* Seção de agenda de projetos */
 .agenda {
   margin-top: 20px;
-  background-color: #fff; /* Fundo branco */
-  border: 1px solid #ccc; /* Borda cinza clara */
-  border-radius: 10px; /* Arredonda as bordas */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 .agenda table {
   width: 100%;
-  border-collapse: collapse; /* Remove espaços entre as células */
+  border-collapse: collapse;
   margin-top: 20px;
 }
 
 .agenda th, .agenda td {
   padding: 15px;
-  border: 1px solid #ccc; /* Borda cinza clara */
+  border: 1px solid #ccc;
   text-align: left;
 }
 
 .agenda th {
-  background-color: #f2f2f2; /* Fundo cinza claro para o cabeçalho */
+  background-color: #f2f2f2;
 }
 
 .agenda tr:nth-child(even) {
-  background-color: #f9f9f9; /* Fundo cinza claro para linhas pares */
+  background-color: #f9f9f9;
 }
 
 .agenda tr:hover {
-  background-color: #f1f1f1; /* Fundo cinza claro ao passar o mouse */
+  background-color: #f1f1f1;
 }
 
-/* Melhorando a aparência do cabeçalho da tabela */
 .agenda th {
   background-color: #333;
   color: white;
 }
 
-/* Ajustando a largura das colunas para uma melhor distribuição */
 .agenda th:nth-child(1), .agenda td:nth-child(1) {
   width: 20%;
 }
@@ -226,4 +229,37 @@ form {
 .agenda th:nth-child(3), .agenda td:nth-child(3),
 .agenda th:nth-child(4), .agenda td:nth-child(4) {
   width: 20%;
+}
+
+/* Tabelas responsivas */
+@media (max-width: 768px) {
+  .agenda th, .agenda td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .media-empresa-table th, .media-empresa-table td {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .about-us, .overview {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .agenda th, .agenda td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .media-empresa-table th, .media-empresa-table td {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .about-us, .overview {
+    width: 100%;
+  }
 }

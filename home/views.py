@@ -40,14 +40,23 @@ def inicio(request):
         usuarios = sorted(usuarios, key=lambda x: x.avg_nota if x.avg_nota is not None else float('-inf'), reverse=True)
         
         # Filtrar projetos ativos e expirados
-        projetos_ativos = Projeto.objects.filter(end_date__gte=date.today()).order_by('end_date')
-        projetos_expirados = Projeto.objects.filter(end_date__lt=date.today()).order_by('end_date')
+        usuario_logado = request.user
+        trabalhos = Projeto.objects.filter(participants__icontains=usuario_logado.username)
+        
+        trabalhos_ativos = trabalhos.filter(end_date__gte=date.today()).order_by('end_date')
+        trabalhos_expirados = trabalhos.filter(end_date__lt=date.today()).order_by('end_date')
+
+        todos_ativos = Projeto.objects.filter(end_date__gte=date.today()).order_by('end_date')
+        todos_expirados = Projeto.objects.filter(end_date__lt=date.today()).order_by('end_date')
     
         contexto = {
             'usuarios': usuarios,
             'media_geral_avaliacoes': round(media_geral_avaliacoes, 1) if total_usuarios > 0 else None,
-            'projetos_ativos': projetos_ativos,
-            'projetos_expirados': projetos_expirados,
+            'trabalhos': trabalhos,
+            'projetos_ativos':trabalhos_ativos,
+            'projetos_expirados': trabalhos_expirados,
+            'todos_ativos':todos_ativos,
+            'todos_expirados': todos_expirados,
         }
     
         return render(request, 'inicio.html', contexto)
@@ -239,9 +248,6 @@ def search(request):
 
 
     return render(request, 'search.html', context)
-
-
-
 
 
 def ranking(request):

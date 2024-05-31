@@ -162,8 +162,8 @@ Resultado: Acreditamos que o processo foi bem sucedido, já que a história foi 
         <td align="center">Vinícius Freitas</td>
     </tr>
     <tr>
-        <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/22b74108-f0a6-4b44-812a-4801a5293dc6" width="150"></td>
         <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/ee4d0a6a-45df-41bb-bd38-71cb17538edc" width="150"></td>
+        <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/22b74108-f0a6-4b44-812a-4801a5293dc6" width="150"></td>
         <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/f32202d0-11a7-4441-9066-0cea637c615d" width="150"></td>
         <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9e367ee6-7875-4c1f-9d52-ce518143deec" width="150"></td>
         <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/241052f5-0ce5-4bdf-b633-3813efadad2c" width="150"></td>

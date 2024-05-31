@@ -84,8 +84,8 @@ def login(request):
 
             return redirect('inicio')
         else:
-            return HttpResponse("Nome ou senha incorretos")
-        
+            return render(request, 'login.html', {'error': True})
+    
         
             
 def signup(request):
@@ -203,8 +203,6 @@ def editar_perfil(request):
         return redirect('personuser')
     
 
-
-    
 @login_required
 def new_project(request):
     if request.method == 'POST':
@@ -243,10 +241,6 @@ def new_project(request):
 def meus_projetos(request):
     return render(request,'meus_projetos.html')
 
-
-
-def header(request):
-    return render(request,'header.html')
 
 
 @login_required(login_url="/login/")

@@ -20,5 +20,4 @@ urlpatterns = [
     path('anotações/', views.anotacao, name="anotar"),
     path('anotacoes/delete/<int:id>/', views.deletar_anotacao, name='deletar_anotacao'),
     path('anotacoes/edit/<int:id>/', views.editar_anotacao, name='editar_anotacao'),
-    path('teste/', views.header, name="teste"),  # Rota para o perfil do usuário logado
 ]

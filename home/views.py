@@ -1,8 +1,5 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from rolepermissions.roles import assign_role
-from rolepermissions.decorators import has_role_decorator, has_permission_decorator
-from rolepermissions.permissions import revoke_permission
 from .models import Projeto
 from django.db.models import Count, Avg
 from django.contrib.auth.models import User
@@ -22,7 +19,7 @@ def inicio(request):
         usuarios = User.objects.all()
         total_media_avaliacoes = 0
         total_usuarios = usuarios.count()
-    
+
         for usuario in usuarios:
             avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=usuario.username)
             usuario.num_avaliacoes = avaliacoes_usuario.count()  
@@ -48,6 +45,7 @@ def inicio(request):
 
         todos_ativos = Projeto.objects.filter(end_date__gte=date.today()).order_by('end_date')
         todos_expirados = Projeto.objects.filter(end_date__lt=date.today()).order_by('end_date')
+
     
         contexto = {
             'usuarios': usuarios,
@@ -58,8 +56,19 @@ def inicio(request):
             'todos_ativos':todos_ativos,
             'todos_expirados': todos_expirados,
         }
-    
+
         return render(request, 'inicio.html', contexto)
+    
+    if request.method == 'POST':
+            email = request.POST.get('email')
+            texto = request.POST.get('texto')
+            usuario = request.user
+            
+            feedback = Feedback3(email=email, texto=texto,user=usuario)
+            feedback.save()
+    
+            return render(request, 'inicio.html')
+    
 
 def login(request):
     if request.method == "GET":
@@ -233,6 +242,11 @@ def new_project(request):
 
 def meus_projetos(request):
     return render(request,'meus_projetos.html')
+
+
+
+def header(request):
+    return render(request,'header.html')
 
 
 @login_required(login_url="/login/")

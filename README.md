@@ -98,7 +98,7 @@ Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferece
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/8437ecc8-5eb4-4ec4-9eb6-62040ffc8469)
 
 
-<h2>Diagrama de Atividade (Adiministrador):</h2> 
+<h2>Diagrama de Atividade (Administrador):</h2> 
 
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/d4eeec6c-537d-48c0-8f6e-c556be76806f)
 
@@ -123,6 +123,23 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
 <details>
 <summary><h2>😎 Entrega 4: </h2></summary>
  <ul>
+  <h2>Imagem do Painel da sprint e do Backlog:</h2>
+
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/cb179d09-ff48-427e-ab3c-8e6e39a70d88)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/47e90820-e44d-4fc0-920b-250ec34baf50)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/ce448e23-3575-42d1-96b3-306ea4008c67)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/f0d9a465-6ac2-41ed-8c5c-b4d000a44909)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/31eadba1-e3fb-46ad-aa67-044a18f5c8d5)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/bd6f83ce-9c16-4858-b2e0-67a80b165ff3)
+
+  <h2>Diagrama de Atividade (Funcionário):</h2>
+
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9b9799e9-30bb-431a-b70b-56ba38b61e61)
+
+  <h2>Diagrama de Atividade (Administrador):</h2>
+
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/b240b51f-d0eb-4474-8366-c58b715004e7)
+  
   <h2>Feedbacks do Pair Programming:</h2>
   <h3>Lucas de Holanda e Breno Lira:</h3>
   <p>Realizamos o pair-programming para implementar a história Feedback, que consiste em: o usuário poderia enviar uma mensagem sobre o que está achando do nosso sistema para nós (desenvolvedores);

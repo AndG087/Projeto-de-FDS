@@ -144,6 +144,9 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
   <h3>Lucas de Holanda e Breno Lira:</h3>
   <p>Realizamos o pair-programming para implementar a história Feedback, que consiste em: o usuário poderia enviar uma mensagem sobre o que está achando do nosso sistema para nós (desenvolvedores);
 Resultado: Acreditamos que o processo foi bem sucedido, já que a história foi implementada com sucesso e sem muitas dificuldades, a experiência anterior nas outras histórias ajudou bastante na execução dessa. De certo modo, foi uma história simples, porém de bastante utilidade para o avançar do projeto e seu melhoramento.</p>
+<h3>Anderson Gomes e Felipe Nunes:</h3>
+  <p>Realizamos o pair-programming para implementar a história Calendário, que consiste em: o usuário poder ver datas limites e iniciais de projetos ativos ou expirados para ter um controle de maior qualidade;
+Resultado: Acreditamos que o processo foi um sucesso, já que a história foi bem implementada e com apenas uma pequena dificuldade, na hora de atualizar o formato date no banco de dados, a experiência anterior das outras entregas nos ajudou a concluirmos a entrega deu uma forma simples para avançarmos o projeto.</p>
  </ul>
 </details>
 

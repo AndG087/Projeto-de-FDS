@@ -84,5 +84,6 @@
 <p align="center">Fica aqui o nosso agradecimento:</p>
 <br>
 <p align="center">Obrigado!</p>
+<br>
 
 <p align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9eabc090-a0cd-4eea-be66-61b65dcc64c4" width="55"></p>

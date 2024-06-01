@@ -146,6 +146,10 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
   <h2>Diagrama de Atividade (Administrador):</h2>
 
   ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/b240b51f-d0eb-4474-8366-c58b715004e7)
+
+  <h2>Foto do bugtracker:</h2>
+
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/12bcaea7-0cda-49e7-ba84-21cdf41e9b45)
   
   <h2>Feedbacks do Pair Programming:</h2>
   <h3>Lucas de Holanda e Breno Lira:</h3>

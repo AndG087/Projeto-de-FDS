@@ -118,7 +118,8 @@ Resultado: Acreditamos que o uso do pair programming aumentou o nosso conhecimen
 </ul>
 
 <h2>Foto do bugtracker:</h2>
-![Captura de tela 2024-06-01 152543](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/a2122299-a0e7-482d-b1d5-425135899cf9)
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/135125674/4cb5edd4-6365-4553-a364-2e82fd8836d9)
+
 
 
 

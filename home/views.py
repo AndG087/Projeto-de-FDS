@@ -148,6 +148,7 @@ def home(request, user_id=None):
         avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=user.username)
         media_avaliacoes = avaliacoes_usuario.aggregate(avg_nota=Avg('nota'))['avg_nota']
         media_avaliacoes = round(media_avaliacoes, 1) if media_avaliacoes is not None else None
+        feedbacks = Feedback3.objects.filter(user=user)
     else:
         # Se nenhum ID de usuário fornecido, carregue o perfil do usuário logado
         user = request.user

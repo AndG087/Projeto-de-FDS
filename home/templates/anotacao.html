@@ -35,8 +35,12 @@
             <nav>
                 <ul>
                     <li><a href="{% url 'inicio' %}">Home</a></li>
-                    <li><a href="{% url 'avaliacaogeral' %}">Avaliações</a></li>
+                    <li><a href="{% url 'personuser' %}">Perfil</a></li>
+                    <li><a href="{% url 'avaliacaogeral' %}">Avaliação Geral</a></li>
+                    {% if user.is_staff %}
                     <li><a href="{% url 'projetos' %}">Projetos</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'ranking' %}">Ranking</a></li>
                     <li><a href="{% url 'search' %}">Pesquisa</a></li>
                     <!-- Adicione mais links de navegação conforme necessário -->
                 </ul>

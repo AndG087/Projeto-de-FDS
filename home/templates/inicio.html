@@ -22,7 +22,9 @@
                 <li><a href="{% url 'personuser' %}">Perfil</a></li>
                 <li><a href="{% url 'anotar' %}">Anotações</a></li>
                 <li><a href="{% url 'avaliacaogeral' %}">Avaliação Geral</a></li>
+                {% if user.is_staff %}
                 <li><a href="{% url 'projetos' %}">Projetos</a></li>
+                {% endif %}
                 <li><a href="{% url 'ranking' %}">Ranking</a></li>
                 <li><a href="{% url 'search' %}">Pesquisa</a></li>
             </ul>
@@ -37,7 +39,7 @@
         <br>
     </div>
     
-    
+    {% if user.is_staff %}
     <section class="media-empresa-section">
         <div class="container">
             <h2>Média da Empresa</h2>
@@ -55,6 +57,7 @@
             </table>
         </div>
     </section>
+    {% endif %}
 
     <br><br><br>
 
@@ -83,6 +86,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {% if user.is_staff == 0 %}
                             {% for projeto in projetos_ativos %}
                             <tr>
                                 <td>{{ projeto.name }}</td>
@@ -91,6 +95,16 @@
                                 <td>{{ projeto.end_date }}</td>
                             </tr>
                             {% endfor %}
+                            {% else %}
+                            {% for projeto in todos_ativos %}
+                            <tr>
+                                <td>{{ projeto.name }}</td>
+                                <td>{{ projeto.description }}</td>
+                                <td>{{ projeto.start_date }}</td>
+                                <td>{{ projeto.end_date }}</td>
+                            </tr>
+                            {% endfor %}
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>
@@ -105,6 +119,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {% if user.is_staff == 0%}
                             {% for projeto in projetos_expirados %}
                             <tr>
                                 <td>{{ projeto.name }}</td>
@@ -113,6 +128,16 @@
                                 <td>{{ projeto.end_date }}</td>
                             </tr>
                             {% endfor %}
+                            {% else %}
+                            {% for projeto in todos_expirados %}
+                            <tr>
+                                <td>{{ projeto.name }}</td>
+                                <td>{{ projeto.description }}</td>
+                                <td>{{ projeto.start_date }}</td>
+                                <td>{{ projeto.end_date }}</td>
+                            </tr>
+                            {% endfor %}
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>

@@ -1,8 +1,5 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from rolepermissions.roles import assign_role
-from rolepermissions.decorators import has_role_decorator, has_permission_decorator
-from rolepermissions.permissions import revoke_permission
 from .models import Projeto
 from django.db.models import Count, Avg
 from django.contrib.auth.models import User
@@ -22,7 +19,7 @@ def inicio(request):
         usuarios = User.objects.all()
         total_media_avaliacoes = 0
         total_usuarios = usuarios.count()
-    
+
         for usuario in usuarios:
             avaliacoes_usuario = Avaliacao3.objects.filter(avaliado=usuario.username)
             usuario.num_avaliacoes = avaliacoes_usuario.count()  
@@ -40,17 +37,38 @@ def inicio(request):
         usuarios = sorted(usuarios, key=lambda x: x.avg_nota if x.avg_nota is not None else float('-inf'), reverse=True)
         
         # Filtrar projetos ativos e expirados
-        projetos_ativos = Projeto.objects.filter(end_date__gte=date.today()).order_by('end_date')
-        projetos_expirados = Projeto.objects.filter(end_date__lt=date.today()).order_by('end_date')
+        usuario_logado = request.user
+        trabalhos = Projeto.objects.filter(participants__icontains=usuario_logado.username)
+        
+        trabalhos_ativos = trabalhos.filter(end_date__gte=date.today()).order_by('end_date')
+        trabalhos_expirados = trabalhos.filter(end_date__lt=date.today()).order_by('end_date')
+
+        todos_ativos = Projeto.objects.filter(end_date__gte=date.today()).order_by('end_date')
+        todos_expirados = Projeto.objects.filter(end_date__lt=date.today()).order_by('end_date')
+
     
         contexto = {
             'usuarios': usuarios,
             'media_geral_avaliacoes': round(media_geral_avaliacoes, 1) if total_usuarios > 0 else None,
-            'projetos_ativos': projetos_ativos,
-            'projetos_expirados': projetos_expirados,
+            'trabalhos': trabalhos,
+            'projetos_ativos':trabalhos_ativos,
+            'projetos_expirados': trabalhos_expirados,
+            'todos_ativos':todos_ativos,
+            'todos_expirados': todos_expirados,
         }
-    
+
         return render(request, 'inicio.html', contexto)
+    
+    if request.method == 'POST':
+            email = request.POST.get('email')
+            texto = request.POST.get('texto')
+            usuario = request.user
+            
+            feedback = Feedback3(email=email, texto=texto,user=usuario)
+            feedback.save()
+    
+            return render(request, 'inicio.html')
+    
 
 def login(request):
     if request.method == "GET":
@@ -66,8 +84,8 @@ def login(request):
 
             return redirect('inicio')
         else:
-            return HttpResponse("Nome ou senha incorretos")
-        
+            return render(request, 'login.html', {'error': True})
+    
         
             
 def signup(request):
@@ -185,8 +203,6 @@ def editar_perfil(request):
         return redirect('personuser')
     
 
-
-    
 @login_required
 def new_project(request):
     if request.method == 'POST':
@@ -226,6 +242,7 @@ def meus_projetos(request):
     return render(request,'meus_projetos.html')
 
 
+
 @login_required(login_url="/login/")
 def search(request):
     context = {}
@@ -239,9 +256,6 @@ def search(request):
 
 
     return render(request, 'search.html', context)
-
-
-
 
 
 def ranking(request):

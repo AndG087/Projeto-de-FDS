@@ -44,7 +44,7 @@ describe('test ranking', () => {
         cy.wait(1500)
         cy.get(':nth-child(1) > a').click()
         cy.wait(1500)
-        cy.get(':nth-child(8) > a').click()
+        cy.get(':nth-child(7) > a').click()
         cy.wait(1500)
         cy.get(':nth-child(1) > a').click()
         cy.wait(1500)
@@ -74,7 +74,7 @@ describe('test ranking', () => {
         cy.wait(1500)
         cy.get(':nth-child(1) > a').click()
         cy.wait(1500)
-        cy.get(':nth-child(8) > a').click()
+        cy.get(':nth-child(7) > a').click()
         cy.wait(1500)
     })
 

@@ -168,6 +168,8 @@ Resultado: Acreditamos que o processo foi bem sucedido, já que a história foi 
 <h3>Anderson Gomes e Felipe Nunes:</h3>
   <p>Realizamos o pair-programming para implementar a história Calendário, que consiste em: o usuário poder ver datas limites e iniciais de projetos ativos ou expirados para ter um controle de maior qualidade;
 Resultado: Acreditamos que o processo foi um sucesso, já que a história foi bem implementada e com apenas uma pequena dificuldade, na hora de atualizar o formato date no banco de dados, a experiência anterior das outras entregas nos ajudou a concluirmos a entrega deu uma forma simples para avançarmos o projeto.</p>
+<h3>Arthur Vinícius e Vinícius Freitas:</h3>
+  <p>Realizamos o pair-programming para implementar as histórias Anotações e Média geral, que consistem em: A primeira permite que o usuário funcionário crie anotações sobre o seu trabalho, como lembretes por exemplo, para auxiliar na sua organização, já a segunda faz com que o usuário administrador consiga visualizar a média de todos os funcionários da empresa e verificar a sua nota geral; Resultado: Para nós, o processo de implementação dessas histórias foi bem sucedido, pois conseguimos realizar esse trabalho de uma forma eficaz, sempre conseguindo resolver os problemas que apareciam tendo em vista toda a experiência adquirida ao longo o projeto.</p>
  </ul>
 </details>
 

@@ -19,23 +19,23 @@
 **Criando Ambiente Virtual ⛰️:**
 
 - Lembre-se de criar um ambiente virtual para conseguir acessar o nosso projeto
-- Para criar o ambiente virtual: python -m venv nome_do_ambiente
-- Para ativar o ambiente virtual (Linux ou MacOS): nome_do_ambiente/bin/activate
-- Para ativar o ambiente virtual (Windows): nome_do_ambiente/Scripts/Activate
-- Após isso lembre-se de clonar o nosso repositório: git clone https://github.com/AndG087/Projeto-de-FDS/edit/main/contributing.md
+- Para criar o ambiente virtual: ```python -m venv nome_do_ambiente```
+- Para ativar o ambiente virtual (Linux ou MacOS): ```nome_do_ambiente/bin/activate```
+- Para ativar o ambiente virtual (Windows): ```nome_do_ambiente/Scripts/Activate```
+- Após isso lembre-se de clonar o nosso repositório: ```git clone https://github.com/AndG087/Projeto-de-FDS/edit/main/contributing.md```
 
 **Como instalar o Django 🌴:**
 
-- Lembre se de instalar o django para poder rodar o nosso projeto: pip install django
-- Verifique a versão do django: django-admin --version
+- Lembre se de instalar o django para poder rodar o nosso projeto: ```pip install django```
+- Verifique a versão do django: ```django-admin --version```
 - A utilizada esse projeto foi a 5.0.4
-- **Instalando depedências, utilize:** pip install -r requirements.txt
+- **Instalando depedências, utilize:** ```pip install -r requirements.txt```
 
 **Rodando a aplicação ⚙️:**
 
 - Para rodar a aplicação ative o ambiente virtual, caso já não esteja ativada
-- Se necessário entre na pasta: cd nome_da_pasta
-- Após isso digite o seguinte código para fazer a aplicação rodar: python manage.py runserver
+- Se necessário entre na pasta: ```cd Projeto-de-FDS```
+- Após isso digite o seguinte código para fazer a aplicação rodar: ```python manage.py runserver```
 
 </details>
 <details>
@@ -64,10 +64,11 @@
 **3. Contribuição na parte do código 💻:**
 
 - Faça um fork do nosso reporsitório para que seja possível você fazer alterações na sua máquina
-- Crie uma branch para adicionar uma nova funcionalidade ou reportar um erro
-- Faça commits da sua feature e **lembre-se de testá-la antes de fazer o push**
+- Crie uma branch para adicionar uma nova funcionalidade ou reportar um erro: ```git checkout -b sua_branch```
+- Faça commits da sua feature e **lembre-se de testá-la antes de fazer o push**: ```git commit -m 'descrevendo as mudanças'```
+- Para fazer o push: ```git push origin sua_branch```
 - Abra um Pull Request (PR): Detalhe todos os pontos daquela funcionalidade e o porque dela ser importante
-- Esteja apto a conversar, discutir e fazer alguns ajustes sobre a feature
+- Esteja apto a conversar, discutir e fazer alguns ajustes sobre a sua feature
 
 **4. Condutas a serem seguidas ⚖️:**
 

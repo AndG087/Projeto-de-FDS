@@ -149,8 +149,15 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
 
   <h2>Foto do bugtracker:</h2>
 
-![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/31452cb0-8df2-4554-9e87-7d45c78f8ee5)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/31452cb0-8df2-4554-9e87-7d45c78f8ee5)
 
+  <h2>Screencast(Testes Automatizados):</h2> Pôr o link aqui...
+
+  <h2>Screencast(Deployment):</h2> Pôr o link aqui...
+
+  <h2>Screencat(Lo-Fi):</h2> Pôr o link aqui...
+
+  <h2>Screencat(Site na Azure):</h2> Pôr o link aqui...
   
   <h2>Feedbacks do Pair Programming:</h2>
   <h3>Lucas de Holanda e Breno Lira:</h3>

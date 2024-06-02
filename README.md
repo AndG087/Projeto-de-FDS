@@ -151,13 +151,13 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
 
   ![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/31452cb0-8df2-4554-9e87-7d45c78f8ee5)
 
-  <h2>Screencast(Testes Automatizados):</h2> Pôr o link aqui...
+  <h2>Screencast(Testes Automatizados):</h2> https://youtu.be/bDJwHpn9C0o
 
-  <h2>Screencast(Deployment):</h2> Pôr o link aqui...
+  <h2>Screencast(Deployment):</h2> https://youtu.be/E0aqMnKDJsc
 
-  <h2>Screencat(Lo-Fi):</h2> Pôr o link aqui...
+  <h2>Screencat(Lo-Fi):</h2> https://youtu.be/pPb9I5Z2MM0
 
-  <h2>Screencat(Site na Azure):</h2> Pôr o link aqui...
+  <h2>Screencat(Site na Azure):</h2> https://youtu.be/-3T3SFSTeXQ
 
   <h2>Link do site na Azure:</h2> https://eye-of-job.azurewebsites.net/
   

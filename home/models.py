@@ -24,7 +24,7 @@ class Projeto(models.Model):
         return self.name
     
 class Foto(models.Model):
-    arq = models.URLField()
+    arq = models.URLField(max_length=500)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     def str(self) -> str:
         return self.nome

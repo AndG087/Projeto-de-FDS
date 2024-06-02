@@ -158,6 +158,8 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
   <h2>Screencat(Lo-Fi):</h2> Pôr o link aqui...
 
   <h2>Screencat(Site na Azure):</h2> Pôr o link aqui...
+
+  <h2>Link do site na Azure:</h2> https://eye-of-job.azurewebsites.net/
   
   <h2>Feedbacks do Pair Programming:</h2>
   <h3>Lucas de Holanda e Breno Lira:</h3>

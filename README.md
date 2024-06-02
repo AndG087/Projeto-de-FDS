@@ -141,11 +141,11 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
 
   <h2>Diagrama de Atividade (Funcionário):</h2>
 
-  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9b9799e9-30bb-431a-b70b-56ba38b61e61)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/3daebbbd-8746-48f2-bb1a-126dcc20e85d)
 
   <h2>Diagrama de Atividade (Administrador):</h2>
 
-  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/b240b51f-d0eb-4474-8366-c58b715004e7)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/6188455d-ad3b-4cad-8b3e-b39030e28054)
 
   <h2>Foto do bugtracker:</h2>
 

@@ -1,7 +1,23 @@
+Cypress.Commands.add('deleteAllUsers', () => {
+    cy.exec('python delete.py', { failOnNonZeroExit: true })
+});
+
 describe('test perfil', () => {
     it('cenario1', () => {
         cy.visit('/');
+        cy.exec('python manage.py migrate')
+        cy.deleteAllUsers();
 
+        cy.get('[href="/signup/"]').click()
+        cy.wait(1500)
+        cy.get('#nome').type("Lucas")
+        cy.wait(1500)
+        cy.get('#email').type("l@gmail.com")
+        cy.wait(1500)
+        cy.get('[type="password"]').type("12345")
+        cy.wait(1500)
+        cy.get('.submitbtn').click()
+        cy.wait(1500)
         cy.get('#nome').type('Lucas')
         cy.wait(1500)
         cy.get('[type="password"]').type('12345')

@@ -1,6 +1,6 @@
 <div align= "center">
 
-<h1>Olá somos o Eye_Of_Job<img src="https://media.discordapp.net/attachments/1226257874188238948/1236467743839227914/logo-branco.png?ex=66381dd2&is=6636cc52&hm=4fcad590a6ae90b1c329126c2f55b29d84502ceab9a3d4d5da9793c697b4c3d2&=&format=webp&quality=lossless&width=498&height=498" width="55px" /><h1/> 
+<h1>Olá somos o Eye_Of_Job <img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9eabc090-a0cd-4eea-be66-61b65dcc64c4" width="55"><h1/> 
 
 </div>
 
@@ -8,7 +8,7 @@
 
 
 <details>
-<summary><h2> 👀 1- Entrega</h2></summary>
+<summary><h2>👀 Entrega 1:</h2></summary>
 <ul>
 <h2>Imagem do Painel da sprint:</h2>
 
@@ -31,7 +31,7 @@
 </ul>
 </details>
 <details>
-<summary><h2> 🕶️ 2- Entrega</h2></summary>
+<summary><h2>👓 Entrega 2: </h2></summary>
 <ul>
 <h2>Diagrama de atividade: </h2>
 
@@ -84,7 +84,7 @@ Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferece
 </ul>
 </details>
 <details>
-<summary><h2> 👓 3- Entrega</h2></summary>
+<summary><h2>🕶️ Entrega 3: </h2></summary>
 <ul>
     <h2>Imagem do Painel da sprint e do Backlog:</h2>
 
@@ -93,13 +93,104 @@ Salvar Informações de Login (opcional): Se desejar, muitos navegadores oferece
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/c4e8c287-08b4-42e4-bfed-ddf5a12f19a3)
 ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/28003044-4308-487b-bc97-7d96d1e66834)
 
-<h2>Diagrama de Atividade(Funcionario):</h2> ![image](https://github.com/AndG087/Projeto-de-FDS/assets/128396955/43c747f0-76dd-4bda-bd02-037ae8102ef3)
+<h2>Diagrama de Atividade (Funcionário):</h2>
 
-<h2>Diagrama de Atividade(Adiministrador):</h2> ![image](https://github.com/AndG087/Projeto-de-FDS/assets/128396955/fc941f52-55ce-4565-92dc-3b4cc83f20dc)
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/8437ecc8-5eb4-4ec4-9eb6-62040ffc8469)
+
+
+<h2>Diagrama de Atividade (Administrador):</h2> 
+
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/d4eeec6c-537d-48c0-8f6e-c556be76806f)
+
 
 <h2>Screencast(Testes Automatizados):</h2> https://youtu.be/HC7Ads9A62M
+<h2>Screencast(Deployment):</h2> https://youtu.be/Rra837wvXrA
+<h2>Screencat(Lo-Fi):</h2> https://www.youtube.com/watch?v=5cxp0Q95S-8
+<h2>Screencat(Site na Azure):</h2> https://youtu.be/RP1hxPD3TiI
+<h2>Feedbacks do Pair Programming:</h2>
+<h3>Lucas de Holanda e Arthur Vinícius:</h3>
+ <p>Realizamos o pair progamming para implementar a história de Projetos Pessoais, onde seria possível visualizar os projetos que cada funcionário estaria participando;
+Resultado: Acreditamos que o uso do pair programming aumentou o nosso conhecimento sobre o framework, css e html. Encontramos algumas dificuldades pelo caminho, por exemplo: fazer os projetos dos usuários específicos aparecerem só para eles mesmos;  fazer essas informações (nome do projeto, participantes, descrição) adequadamente na tela do usuário. Consideramos que a dupla facilitou muito mais o trabalho, sempre um ajudando o outro, evoluímos no decorrer do trabalho.</p>
+<h3>Anderson Gomes e Vinícius Freitas:</h3>
+ <p>Focamos em concluir a história de pesquisa do site. Essa colaboração estreita fortaleceu nosso entrosamento como equipe e ampliou nosso conhecimento em HTML, CSS e Python. Identificamos lacunas em nossos testes automatizados, buscando soluções eficazes para evitar erros no processo de automação do site. Essa experiência não só impulsionou nosso progresso na tarefa atribuída, mas também melhorou nossa dinâmica de equipe e qualidade de trabalho.</p>
+<h3>Breno Lira e Felipe Nunes</h3>
+ <p>Realizamos o pair progamming para implementar a história de Ranking de usuários, onde seria possível visualizar o ranking dos funcionários da empresa, se baseando na nota média gerada das avaliações recebidas por cada usuário; Resultado: O uso do pair programming, novamente, foi muito útil e nos ajudou a trabalhar de forma mais eficiente. Não encontramos muitos desafios para a implementação dessa história, houveram algumas dificuldades ao tentar colocar alguns elementos nos Rankings, mas nada que atrasou muito o andamento do nosso trabalho. Trabalhar utilizando o pair programming  pode ajudar muito, a divisão de atividades, e a disposição para ajudar a sua dupla auxilia muito para um fluxo de trabalho mais fluido e organizado.</p>
 </ul>
+
+<h2>Foto do bugtracker:</h2>
+
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/135125674/4cb5edd4-6365-4553-a364-2e82fd8836d9)
+
+
+
+
+Link do nosso site: "https://eye-of-job.azurewebsites.net/"
+</details>
+
+<details>
+<summary><h2>😎 Entrega 4: </h2></summary>
+ <ul>
+  <h2>Imagem do Painel da sprint e do Backlog:</h2>
+
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/cb179d09-ff48-427e-ab3c-8e6e39a70d88)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/47e90820-e44d-4fc0-920b-250ec34baf50)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/ce448e23-3575-42d1-96b3-306ea4008c67)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/f0d9a465-6ac2-41ed-8c5c-b4d000a44909)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/31eadba1-e3fb-46ad-aa67-044a18f5c8d5)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/bd6f83ce-9c16-4858-b2e0-67a80b165ff3)
+
+  <h2>Diagrama de Atividade (Funcionário):</h2>
+
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9b9799e9-30bb-431a-b70b-56ba38b61e61)
+
+  <h2>Diagrama de Atividade (Administrador):</h2>
+
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/b240b51f-d0eb-4474-8366-c58b715004e7)
+
+  <h2>Foto do bugtracker:</h2>
+
+![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/12bcaea7-0cda-49e7-ba84-21cdf41e9b45)
+  
+  <h2>Feedbacks do Pair Programming:</h2>
+  <h3>Lucas de Holanda e Breno Lira:</h3>
+  <p>Realizamos o pair-programming para implementar a história Feedback, que consiste em: o usuário poderia enviar uma mensagem sobre o que está achando do nosso sistema para nós (desenvolvedores);
+Resultado: Acreditamos que o processo foi bem sucedido, já que a história foi implementada com sucesso e sem muitas dificuldades, a experiência anterior nas outras histórias ajudou bastante na execução dessa. De certo modo, foi uma história simples, porém de bastante utilidade para o avançar do projeto e seu melhoramento.</p>
+<h3>Anderson Gomes e Felipe Nunes:</h3>
+  <p>Realizamos o pair-programming para implementar a história Calendário, que consiste em: o usuário poder ver datas limites e iniciais de projetos ativos ou expirados para ter um controle de maior qualidade;
+Resultado: Acreditamos que o processo foi um sucesso, já que a história foi bem implementada e com apenas uma pequena dificuldade, na hora de atualizar o formato date no banco de dados, a experiência anterior das outras entregas nos ajudou a concluirmos a entrega deu uma forma simples para avançarmos o projeto.</p>
+ </ul>
 </details>
 
 <h1> Participantes👪</h1>
+
+<br>
+
+<div align="center">
+  <table border="2">
+    <tr>
+        <td align="center">Arthur Vinícius</td>
+        <td align="center">Breno Lira</td>
+        <td align="center">Lucas de Holanda</td>
+        <td align="center">Anderson Gomes</td>
+        <td align="center">Felipe Nunes</td>
+        <td align="center">Vinícius Freitas</td>
+    </tr>
+    <tr>
+        <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/ee4d0a6a-45df-41bb-bd38-71cb17538edc" width="150"></td>
+        <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/22b74108-f0a6-4b44-812a-4801a5293dc6" width="150"></td>
+        <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/f32202d0-11a7-4441-9066-0cea637c615d" width="150"></td>
+        <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9e367ee6-7875-4c1f-9d52-ce518143deec" width="150"></td>
+        <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/241052f5-0ce5-4bdf-b633-3813efadad2c" width="150"></td>
+        <td align="center"><img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/eb4e31c9-19de-40d0-8e18-e481a7a5bf4b" width="150"></td>
+    </tr>
+    <tr>
+        <td align="center">https://github.com/Art-2005</td>
+        <td align="center">https://github.com/Breno-Lira</td>
+        <td align="center">https://github.com/LucasHolandaBarros</td>
+        <td align="center">https://github.com/AndG087</td>
+        <td align="center">https://github.com/FelipeNMorgado</td>
+        <td align="center">https://github.com/ViniciusFreitas2801</td>
+    </tr>
+  </table>
+</div>
 

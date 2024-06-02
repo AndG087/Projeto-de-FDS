@@ -1,0 +1,265 @@
+/* Reset de margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral */
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container centralizado */
+.container {
+  text-align: center;
+  padding: 10px;
+  
+}
+
+/* Links estilizados */
+a {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #fff;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+  background-color:#0089c0 ;
+  color: black;
+}
+
+
+
+/* Cabeçalho */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+/* Navegação */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+/* Conteúdo principal */
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Seção com títulos */
+section h2 {
+  margin-bottom: 10px;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.linha-de-separacao {
+  border-top: 1px solid white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilo dos botões */
+.btn-custom {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #0089c0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: #0077a1;
+}
+
+/* Seção de overview */
+.overview {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.rating {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Seção Média da Empresa */
+.media-empresa-section {
+  margin-top: 20px;
+}
+
+.media-empresa-table {
+  margin: 0 auto;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.media-empresa-table th, .media-empresa-table td {
+  padding: 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.media-empresa-table th {
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+}
+
+.media-empresa-table td {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Seção de agenda de projetos */
+.agenda {
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.agenda table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.agenda th, .agenda td {
+  padding: 15px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.agenda th {
+  background-color: #f2f2f2;
+}
+
+.agenda tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.agenda tr:hover {
+  background-color: #f1f1f1;
+}
+
+.agenda th {
+  background-color: #333;
+  color: white;
+}
+
+.agenda th:nth-child(1), .agenda td:nth-child(1) {
+  width: 20%;
+}
+
+.agenda th:nth-child(2), .agenda td:nth-child(2) {
+  width: 40%;
+}
+
+.agenda th:nth-child(3), .agenda td:nth-child(3),
+.agenda th:nth-child(4), .agenda td:nth-child(4) {
+  width: 20%;
+}
+
+/* Tabelas responsivas */
+@media (max-width: 768px) {
+  .agenda th, .agenda td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .media-empresa-table th, .media-empresa-table td {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .about-us, .overview {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .agenda th, .agenda td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .media-empresa-table th, .media-empresa-table td {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .about-us, .overview {
+    width: 100%;
+  }
+}

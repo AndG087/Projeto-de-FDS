@@ -3,7 +3,15 @@
     --invalid: hsl(10 80% 40%);
     --input: hsl(0 0% 0%);
   }
-  body {
+
+  body{
+    font-weight: 100;
+    background-color: hsl(0 0% 6%);
+    color: hsl(0 0% 98%);
+  }
+
+
+  .form_login {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -93,3 +101,13 @@
     font-size: 30px;
     color: #a9a9a9;
   }
+
+  #nome_logo{
+    font-weight: 400;
+    padding-top: 2%;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px; /* Espessura do sublinhado */
+}

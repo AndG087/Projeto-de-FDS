@@ -12,9 +12,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.0.2/tailwind.min.css"
     />
-    <link rel="stylesheet" href="{% static 'login.css' %}" />
+    <link rel="stylesheet" href="{% static 'login2.css' %}" />
   </head>
   <body>
+
+    
+    <h1 id = "nome_logo">EYE OF JOB</h1>
+   
+    <div class = "form_login">
     <form action="{% url 'login' %}" method="POST">{% csrf_token%}
       <h1>Login</h1>
       <div class="form-group">
@@ -27,5 +32,23 @@
         <p>Você não possui cadastro? <a href="{% url 'signup' %}">Cadastrar-se</a></p>
       </div>
     </form>
+  </div>
+
+<!-- Pop-up de erro -->
+<div id="erroPopup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 0, 0, 0.7); color: #fff; padding: 20px; border-radius: 5px; z-index: 9999;">
+  Nome ou senha incorretos!
+</div>
+
+<script>
+  // Verifica se existe um erro passado pelo backend
+  {% if error %}
+  document.getElementById('erroPopup').style.display = 'block';
+  setTimeout(function() {
+    document.getElementById('erroPopup').style.display = 'none';
+  }, 3000); // Oculta o pop-up após 3 segundos
+  {% endif %}
+</script>
+
+
   </body>
 </html>

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Input Validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.0.2/tailwind.min.css" />
+    <link rel="stylesheet" href="{% static 'login2.css' %}" />
+</head>
+<body>
+
+<h1 id="nome_logo">EYE OF JOB</h1>
+
+<div class="form_login">
+    <form action="{% url 'signupadmin' %}" method="POST">{% csrf_token %}
+        <h1>Cadastro Admin/Empresa</h1>
+        <div class="form-group">
+            <label for="username">Nome de Usuário</label>
+            <input type="text" id="username" name="username" spellcheck=false required placeholder="Nome de Usuário" autocomplete="off" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" spellcheck=false required placeholder="Email" autocomplete="off" />
+            <label for="password">Senha</label>
+            <input type="password" name="password" required placeholder="Senha" autocomplete="off" />
+            <button type="submit" class="submitbtn">Cadastrar</button> 
+        </div>
+        <p>Já possui uma conta? <a href="{% url 'login' %}">Login</a></p>
+    </form>
+</div>
+
+</body>
+</html>

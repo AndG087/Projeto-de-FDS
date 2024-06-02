@@ -155,9 +155,9 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
 
   <h2>Screencast(Deployment):</h2> https://youtu.be/E0aqMnKDJsc
 
-  <h2>Screencat(Lo-Fi):</h2> https://youtu.be/pPb9I5Z2MM0
+  <h2>Screencast(Lo-Fi):</h2> https://youtu.be/pPb9I5Z2MM0
 
-  <h2>Screencat(Site na Azure):</h2> https://youtu.be/-3T3SFSTeXQ
+  <h2>Screencast(Site na Azure):</h2> https://youtu.be/-3T3SFSTeXQ
 
   <h2>Link do site na Azure:</h2> https://eye-of-job.azurewebsites.net/
   

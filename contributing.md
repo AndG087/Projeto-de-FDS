@@ -1,4 +1,4 @@
-# Contribuindo para o EYE-OF-JOB <img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9eabc090-a0cd-4eea-be66-61b65dcc64c4" width="55">
+# <div align="center"> Contribuindo para o EYE-OF-JOB <img src="https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9eabc090-a0cd-4eea-be66-61b65dcc64c4" width="55"> </div>
 
 <br>
 <p align="center">Bem-vindo ao EYE-OF-JOB, somos uma equipe que desenvolvemos um sistema para uma melhor gestão no ambiente de trabalho de uma empresa ou projeto. A seguir você verá como contribuir com o nosso projeto, agradecemos muito!</p>

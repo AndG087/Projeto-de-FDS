@@ -1,86 +1,46 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 name: Build and deploy Python app to Azure Web App - Eye-of-job
-
 on:
   push:
     branches:
-      - prod
+      - Prod
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:latest
-        env:
-          POSTGRES_DB: ${{ secrets.DBNAME }}
-          POSTGRES_USER: ${{ secrets.DBUSER }}
-          POSTGRES_PASSWORD: ${{ secrets.DBPASS }}
-        options: >-
-          --health-cmd "pg_isready -U ${{ secrets.DBUSER }} -d ${{ secrets.DBNAME }}"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Python version
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v1
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Create and start virtual environment
         run: |
           python -m venv venv
           source venv/bin/activate
-
+      
       - name: Install dependencies
-        run: |
-          source venv/bin/activate
-          pip install -r requirements.txt
-          npm ci
+        run: pip install -r requirements.txt
 
-      - name: Verify PostgreSQL Service
+      - name: Cleaning testing files
         run: |
-          echo "Checking PostgreSQL service status..."
-          docker ps -a
-          docker logs ${{ job.services.postgres.id }}
-
-      - name: Run tests
-        env:
-          DBNAME: ${{ secrets.DBNAME }}
-          DBUSER: ${{ secrets.DBUSER }}
-          DBPASS: ${{ secrets.DBPASS }}
-          DBHOST: localhost
-          DBPORT: 5432
-          SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          DEBUG: '1'
-          ALLOWED_HOSTS: 'localhost,127.0.0.1'
-        run: |
-          source venv/bin/activate
-          python manage.py migrate
-          python manage.py runserver &
-          sleep 10
-          npx cypress run
-        
-      - name: Clean up
-        run: |
+          rm db.sqlite3
           rm .env
-          rm cypress.config.js
-          rm package-lock.json
-          rm package.json
-          rm -rf cypress
-
+      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       - name: Zip artifact for deployment
-        run: zip -r release.zip .
+        run: zip release.zip ./* -r
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v3
         with:
           name: python-app
-          path: release.zip
-
+          path: |
+            release.zip
+            !venv/
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -88,24 +48,21 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     permissions:
-      id-token: write # This is required for requesting the JWT
-
+      id-token: write #This is required for requesting the JWT
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
           name: python-app
-
       - name: Unzip artifact for deployment
         run: unzip release.zip
-
+      
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID }}
-
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F5E8E7D2539A4461BB13C3BD170CB0D3 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5D484F12BA94411CA321CEE330FC13DD }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_DA8C03CFB492498E9479B6F746D7910A }}
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp

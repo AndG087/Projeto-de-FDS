@@ -162,7 +162,8 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
   <h2>Link do site na Azure:</h2> https://eye-of-job.azurewebsites.net/
 
   <h2>Link da apresentação final do Projeto:</h2> https://www.canva.com/design/DAGGvNM7OPc/wbt6vgoisR-9YoO-_zjOtg/edit?utm_content=DAGGvNM7OPc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
- 
+
+  <h2>Link do Jira:</h2> https://cesar-fnm.atlassian.net/jira/software/projects/EJ/boards/2
   
   <h2>Feedbacks do Pair Programming:</h2>
   <h3>Lucas de Holanda e Breno Lira:</h3>

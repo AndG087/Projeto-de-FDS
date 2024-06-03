@@ -2,7 +2,8 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: runtests eye-of-job
+name: Build and deploy Python app to Azure Web App - Eye-of-job
+
 on:
   push:
     branches:
@@ -32,4 +33,4 @@ jobs:
       - name: Cleaning testing files
         run: |
           rm db.sqlite3
-          rm .env
+          rm .env

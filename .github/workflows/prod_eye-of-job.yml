@@ -34,7 +34,7 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-
+      
       - name: Install dependencies
         run: |
           source venv/bin/activate
@@ -57,11 +57,14 @@ jobs:
           python manage.py runserver &
           sleep 10
           npx cypress run
-
+        
       - name: Clean up
         run: |
           rm .env
-          rm db.sqlite3
+          rm cypress.config.js
+          rm package-lock.json
+          rm package.json
+          rm -rf cypress
 
       - name: Zip artifact for deployment
         run: zip -r release.zip .

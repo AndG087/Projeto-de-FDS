@@ -17,7 +17,7 @@ jobs:
           POSTGRES_USER: ${{ secrets.DBUSER }}
           POSTGRES_PASSWORD: ${{ secrets.DBPASS }}
         options: >-
-          --health-cmd pg_isready
+          --health-cmd "pg_isready -U ${{ secrets.DBUSER }} -d ${{ secrets.DBNAME }}"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
@@ -34,12 +34,18 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-      
+
       - name: Install dependencies
         run: |
           source venv/bin/activate
           pip install -r requirements.txt
           npm ci
+
+      - name: Verify PostgreSQL Service
+        run: |
+          echo "Checking PostgreSQL service status..."
+          docker ps -a
+          docker logs ${{ job.services.postgres.id }}
 
       - name: Run tests
         env:

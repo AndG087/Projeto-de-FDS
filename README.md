@@ -141,15 +141,29 @@ Link do nosso site: "https://eye-of-job.azurewebsites.net/"
 
   <h2>Diagrama de Atividade (Funcionário):</h2>
 
-  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/9b9799e9-30bb-431a-b70b-56ba38b61e61)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/3daebbbd-8746-48f2-bb1a-126dcc20e85d)
 
   <h2>Diagrama de Atividade (Administrador):</h2>
 
-  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/b240b51f-d0eb-4474-8366-c58b715004e7)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/142419627/6188455d-ad3b-4cad-8b3e-b39030e28054)
 
   <h2>Foto do bugtracker:</h2>
 
-![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/12bcaea7-0cda-49e7-ba84-21cdf41e9b45)
+  ![image](https://github.com/AndG087/Projeto-de-FDS/assets/150074307/31452cb0-8df2-4554-9e87-7d45c78f8ee5)
+
+  <h2>Screencast(Testes Automatizados):</h2> https://youtu.be/bDJwHpn9C0o
+
+  <h2>Screencast(Deployment):</h2> https://youtu.be/E0aqMnKDJsc
+
+  <h2>Screencast(Lo-Fi):</h2> https://youtu.be/pPb9I5Z2MM0
+
+  <h2>Screencast(Site na Azure):</h2> https://youtu.be/-3T3SFSTeXQ
+
+  <h2>Link do site na Azure:</h2> https://eye-of-job.azurewebsites.net/
+
+  <h2>Link da apresentação final do Projeto:</h2> https://www.canva.com/design/DAGGvNM7OPc/wbt6vgoisR-9YoO-_zjOtg/edit?utm_content=DAGGvNM7OPc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+  <h2>Link do Jira:</h2> https://cesar-fnm.atlassian.net/jira/software/projects/EJ/boards/2
   
   <h2>Feedbacks do Pair Programming:</h2>
   <h3>Lucas de Holanda e Breno Lira:</h3>
@@ -158,8 +172,12 @@ Resultado: Acreditamos que o processo foi bem sucedido, já que a história foi 
 <h3>Anderson Gomes e Felipe Nunes:</h3>
   <p>Realizamos o pair-programming para implementar a história Calendário, que consiste em: o usuário poder ver datas limites e iniciais de projetos ativos ou expirados para ter um controle de maior qualidade;
 Resultado: Acreditamos que o processo foi um sucesso, já que a história foi bem implementada e com apenas uma pequena dificuldade, na hora de atualizar o formato date no banco de dados, a experiência anterior das outras entregas nos ajudou a concluirmos a entrega deu uma forma simples para avançarmos o projeto.</p>
+<h3>Arthur Vinícius e Vinícius Freitas:</h3>
+  <p>Realizamos o pair-programming para implementar as histórias Anotações e Média geral, que consistem em: A primeira permite que o usuário funcionário crie anotações sobre o seu trabalho, como lembretes por exemplo, para auxiliar na sua organização, já a segunda faz com que o usuário administrador consiga visualizar a média de todos os funcionários da empresa e verificar a sua nota geral; Resultado: Para nós, o processo de implementação dessas histórias foi bem sucedido, pois conseguimos realizar esse trabalho de uma forma eficaz, sempre conseguindo resolver os problemas que apareciam tendo em vista toda a experiência adquirida ao longo o projeto.</p>
  </ul>
 </details>
+
+<h2>Quer contribuir com o projeto? Acesse aqui:</h2>link para o contributing: https://github.com/AndG087/Projeto-de-FDS/blob/main/contributing.md
 
 <h1> Participantes👪</h1>
 

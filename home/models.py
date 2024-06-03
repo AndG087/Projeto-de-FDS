@@ -35,7 +35,7 @@ class Descricao(models.Model):
     def str(self) -> str:
         return self.nome
     
-
+#OLA
 class Feedback3(models.Model):
     email = models.CharField(max_length=150)
     texto = models.CharField(max_length=500)

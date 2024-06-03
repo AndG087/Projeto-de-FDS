@@ -176,6 +176,8 @@ Resultado: Acreditamos que o processo foi um sucesso, já que a história foi be
  </ul>
 </details>
 
+<h2>Quer contribuir com o projeto? Acesse aqui:</h2>link para o contributing: https://github.com/AndG087/Projeto-de-FDS/blob/main/contributing.md
+
 <h1> Participantes👪</h1>
 
 <br>

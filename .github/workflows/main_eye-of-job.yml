@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - Eye-of-job
+name: Run tests of development - Eyeofjob-fds
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,17 +20,34 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v1
         with:
-          python-version: '3.12'
+          python-version: '3.11'
 
       - name: Create and start virtual environment
         run: |
           python -m venv venv
           source venv/bin/activate
-      
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
-      
+        run: |
+          pip install -r requirements.txt
+          npm ci
+
+      - name: Run tests
+        run: |
+          python manage.py migrate
+          python manage.py runserver &
+          sleep 5
+          python populate_request.py
+          sleep 10
+          npx cypress run
+
       - name: Cleaning testing files
         run: |
-          rm db.sqlite3
           rm .env
+          rm db.sqlite3
+          rm cypress.config.js
+          rm package-lock.json
+          rm package.json
+          rm -rf cypress
+          rm -rf node_modules
+          

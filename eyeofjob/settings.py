@@ -17,9 +17,11 @@ load_dotenv(BASE_DIR / '.env')
 TARGET_ENV = os.getenv('TARGET_ENV')
 NOT_PROD = not TARGET_ENV.lower().startswith('prod')
 if NOT_PROD:
+    # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
+    # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = 'django-insecure-mr_k(nk24&uwy)07w6lh*!a*&3^i=0m=3e5dk2djl-(xmv!-2t'
-    ALLOWED_HOSTS = ['eye-of-job.azurewebsites.net', '127.0.0.1']
+    ALLOWED_HOSTS = ['eye-of-job.azurewebsites.net','127.0.0.1']
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -29,9 +31,10 @@ if NOT_PROD:
 else:
     SECRET_KEY = os.getenv('SECRET_KEY')
     DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
-    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-    CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',')
-    SECURE_SSL_REDIRECT = os.getenv('SECURE_SSL_REDIRECT', '0').lower() in ['true', 't', '1']
+    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
+    CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS')
+    SECURE_SSL_REDIRECT = \
+        os.getenv('SECURE_SSL_REDIRECT', '0').lower() in ['true', 't', '1']
     if SECURE_SSL_REDIRECT:
         SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     DATABASES = {
@@ -44,7 +47,6 @@ else:
             'OPTIONS': {'sslmode': 'require'},
         }
     }
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -86,7 +88,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'eyeofjob.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
@@ -119,4 +120,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL='/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField's
